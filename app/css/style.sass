@@ -1,0 +1,3493 @@
+@import "reset.css"
+
+$main-font: 'Noto Serif', sans-serif
+$accent-font: 'Montserrat', sans-serif
+
+$text-dark-color: #373737
+$light-text-color: #ffffff
+
+$pink: #f83d70
+$pink-hover: #eb3365
+$custom-color: #3f51b5
+$title-color-light: #e7e9f6
+$title-color-dark: #4d5cb9
+$small-title-color-dark: #8690ce
+
+$bgSize_selectBtn: 10px 13px
+//$green-color: #0ed991
+
+
+=imgContain()
+  width: 100%
+  height: 100%
+  object-fit: contain
+=imgCover()
+  width: 100%
+  height: 100%
+  object-fit: cover
+=activeItem()
+  color: $pink
+  transition: all ease-in-out 0.375s
+  position: relative
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    right: 0
+    bottom: -1px
+    left: 0
+    width: 100%
+    height: 0
+    border-bottom: 1px solid $pink
+  &:hover
+    &:after
+      animation-duration: 0.45s
+      animation-name: underline
+
+
+html, body, main
+  width: 100%
+
+body
+  &.not-scrolling
+    overflow: hidden
+
+.disable-hover, .disable-hover *
+  pointer-events: none !important
+
+*
+  box-sizing: border-box
+  font-family: $main-font
+
+
+sup
+  vertical-align: top
+
+sub
+  vertical-align: bottom
+
+button
+  cursor: pointer
+  border: none
+  background: transparent
+
+.wrapper
+  width: 1170px
+  margin: 0 auto
+  @media (max-width: 1280px)
+    width: 960px
+  @media (max-width: 1024px)
+    width: 750px
+  @media (max-width: 770px)
+    width: 580px
+  @media (max-width: 600px)
+    width: 100%
+    padding: 0 15px
+
+.row
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+.col
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  flex-flow: column nowrap
+
+h1, .h1, h3, .h3, p
+  width: 100%
+
+h1, .h1
+  font-family: $accent-font
+  color: #000
+  font-size: 40px
+  line-height: 1.3
+  font-weight: 700
+  position: relative
+  z-index: 20
+  @media (max-width: 1024px)
+    margin-bottom: 20px
+  @media (max-width: 600px)
+    font-size: 30px
+h3, .h3
+  font-family: $accent-font
+  font-size: 24px
+  line-height: 36px
+  color: #000
+  font-weight: 700
+  @media (max-width: 600px)
+    font-size: 18px
+    line-height: 24px
+p
+  font-family: $main-font
+  font-size: 16px
+  line-height: 31px
+  color: #000
+  font-weight: 400
+  margin-bottom: 30px
+  @media (max-width: 1024px)
+    margin-bottom: 30px
+  @media (max-width: 600px)
+    margin-bottom: 20px
+  &:last-child
+    margin-bottom: 0
+
+blockquote
+  font-family: $accent-font
+  font-size: 31px
+  line-height: 37px
+  color: $small-title-color-dark
+  padding: 10px 0 10px
+  margin-bottom: 40px
+  font-weight: 300
+  border-bottom: 1px solid $small-title-color-dark
+  @media (max-width: 1024px)
+    margin-bottom: 35px
+    padding-top: 0
+  @media (max-width: 600px)
+    margin-bottom: 25px
+    font-size: 20px
+    line-height: 31px
+    padding: 0 0 5px
+
+.shadow_header
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .3)
+  @media (max-width: 1024px)
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3)
+  @media (max-width: 600px)
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .3)
+.shadow_footer
+  box-shadow: 0 -6px 16px 0px rgba(0, 0, 0, 0.3)
+  @media (max-width: 1024px)
+    box-shadow: 0 -4px 8px 0px rgba(0, 0, 0, 0.3)
+  @media (max-width: 600px)
+    box-shadow: 0 -2px 6px 0px rgba(0, 0, 0, 0.3)
+.shadow_photo
+  box-shadow: 2px 0 12px rgba(0, 0, 0, .3)
+  @media (max-width: 1024px)
+    box-shadow: 4px 0 9px rgba(0, 0, 0, .3)
+  @media (max-width: 600px)
+    box-shadow: 2px 0 4px rgba(0, 0, 0, .3)
+.shadow_color_box
+  box-shadow: 4px 0 14px rgba(0, 0, 0, .3)
+  @media (max-width: 1024px)
+    box-shadow: 4px 0 8px rgba(0, 0, 0, .3)
+  @media (max-width: 600px)
+    box-shadow: 2px 0 4px rgba(0, 0, 0, .3)
+.shadow_btn
+  box-shadow: 2px 0 12px rgba(0, 0, 0, .3)
+  @media (max-width: 1024px)
+    box-shadow: 4px 0 8px rgba(0, 0, 0, .3)
+  @media (max-width: 600px)
+    box-shadow: 2px 0 4px rgba(0, 0, 0, .3)
+
+
+.follow-section
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  margin-right: 50px
+  .follow-title
+    color: $small-title-color-dark
+    font-family: $accent-font
+    font-size: 16px
+    line-height: 21px
+  ul
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    margin-left: 20px
+    li
+      margin-right: 20px
+    a
+      text-decoration: none
+      svg
+        width: 15px!important
+        height: 15px!important
+      .st0
+        fill: $small-title-color-dark!important
+        stroke: $small-title-color-dark!important
+        transition: all ease .15s
+      &:hover
+        .st0
+          fill: #ffffff!important
+          stroke: #ffffff!important
+
+
+//header
+header
+  background: $custom-color
+  padding: 35px 0 30px
+  @extend .shadow_header
+  position: relative
+  z-index: 100
+  @media (max-width: 1024px)
+    height: 53px
+    padding: 8px 15px
+  .wrapper
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    flex-flow: row nowrap
+    @media (max-width: 1024px)
+      width: 100%
+      padding: 0
+      display: flex
+      justify-content: flex-start
+      align-items: stretch
+  .col2
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+    align-items: flex-end
+    @media (max-width: 1024px)
+      justify-content: center
+      align-items: flex-start
+      width: 100%
+    .row1, .row2
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-end
+      align-items: center
+    .row1
+      margin-bottom: 35px
+      @media (max-width: 1024px)
+        margin-bottom: 0
+        width: 100%
+        justify-content: space-between
+    .main-menu-section
+      @media (max-width: 1024px)
+        display: none
+        width: 100%
+        position: absolute
+        left: 0
+        top: 0
+        background: $custom-color
+        padding: 10px 45px 45px 73px
+        justify-content: flex-start
+        z-index: 150
+        box-shadow: 0 2px 3px rgba(0, 0, 0, .2)
+      &.show
+        display: flex
+        .main-menu
+          ul
+            @media (max-width: 1024px)
+              display: flex
+              justify-content: center
+              align-items: flex-start
+              flex-flow: column
+            li
+              @media (max-width: 1024px)
+                margin-right: 0
+                margin-top: 10px
+    .main-menu
+      ul
+        @media (max-width: 1024px)
+          display: none
+  .follow-section
+    @media (max-width: 1024px)
+      display: none
+
+  .pink-btn
+    @media (max-width: 1024px)
+      display: none
+
+  .logo-section
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-flow: column nowrap
+    text-decoration: none
+    .img-logo
+      margin-bottom: 15px
+      @media (max-width: 1024px)
+        margin-bottom: 0
+        margin-right: 20px
+      svg
+        width: 78px
+        height: 78px
+        @media (max-width: 1024px)
+          width: 36px
+          height: 36px
+    .text-logo
+      color: #ffffff
+      text-decoration: none
+      font-family: $accent-font
+      font-size: 14px
+      line-height: 1
+      @media (max-width: 1024px)
+        display: none
+  .burger
+    display: none
+    background: transparent
+    border: none
+    padding: 15px 10px
+    position: absolute
+    right: 20px
+    top: calc(50% - 20px)
+    @media (max-width: 1024px)
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-flow: column
+    span
+      width: 26px
+      height: 1px
+      margin-bottom: 8px
+      background: #ffffff
+      transition: all ease 0.2s
+      &:last-child
+        margin-bottom: 0
+    &.close
+      span
+        margin-bottom: 0
+        &:first-child
+          transform: rotate(45deg)
+        &:last-child
+          transform: rotate(-45deg)
+  .mail-section
+    font-family: $accent-font
+    color: #ffffff
+    font-size: 14px
+    line-height: 21px
+    margin-right: 50px
+    @media (max-width: 1024px)
+      display: none
+  .login-section
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    margin-right: 50px
+    a
+      text-transform: uppercase
+      text-decoration: none
+      font-family: $accent-font
+      font-size: 14px
+      line-height: 21px
+      color: $small-title-color-dark
+      padding-right: 8px
+      border-right: 1px solid $small-title-color-dark
+      margin-right: 8px
+      &:last-child
+        border: none
+        padding-right: 0
+        margin-right: 0
+      &:hover
+        color: $pink
+
+  .main-menu
+    ul
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      flex-flow: row nowrap
+      li
+        margin-right: 55px
+        &:last-child
+          margin-right: 0
+        &.active-item, &:hover
+          a
+            +activeItem()
+        a
+          text-decoration: none
+          color: #ffffff
+          font-family: $accent-font
+          font-weight: 400
+          padding: 10px 0
+          display: block
+
+
+//header end
+
+//main
+main
+  padding-top: 40px
+  @media (max-width: 1024px)
+    padding-top: 15px
+//main end
+
+//title-section
+.title-section
+  position: absolute
+  & *
+    color: $title-color-light
+    font-family: $accent-font
+    line-height: 1
+    font-weight: 900
+    font-size: 110px
+    @media (max-width: 1024px)
+      font-size: 110px
+    @media (max-width: 600px)
+      font-size: 60px
+  & *:nth-child(2n), .text2, .text4
+    font-size: 140px
+    @media (max-width: 1024px)
+      font-size: 140px
+    @media (max-width: 600px)
+      font-size: 80px
+  .text1
+    margin: -17px auto 0 0
+    @media (max-width: 600px)
+      margin-top: -10px
+  .text2
+    margin: -30px auto 0 0
+    @media (max-width: 1024px)
+      margin-top: -30px
+    @media (max-width: 600px)
+      margin-top: -17px
+  .text3
+    margin: -33px auto 0 0
+    @media (max-width: 1024px)
+      margin-top: -33px
+    @media (max-width: 600px)
+      margin-top: -14px
+  .text4
+    margin: -38px auto 0 0
+    @media (max-width: 1280px)
+      margin-top: -38px
+    @media (max-width: 600px)
+      margin-top: -15px
+// title-section end
+
+//btns
+//btn-transparent
+.btn-transparent
+  border: 1px solid $pink
+  border-radius: 25px
+  width: 168px
+  height: 44px
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  color: $pink
+  text-decoration: none
+  text-transform: uppercase
+  font-family: $accent-font
+  font-size: 14px
+  line-height: 1
+  font-weight: 700
+  transition: all ease-in-out 0.25s
+  @media (max-width: 600px)
+    margin: auto
+  &:hover
+    background: $pink
+    color: white
+    border-color: white
+//btn-transparent end
+//btn-transp-withoutBorder
+.btn-transp-withoutBorder
+  color: $pink
+  font-family: $accent-font
+  font-size: 14px
+  line-height: 21px
+  font-weight: 700
+  text-transform: uppercase
+  text-decoration: none
+  padding-bottom: 8px
+  position: relative
+  display: inline-block
+  @media (max-width: 600px)
+    margin: auto
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    bottom: 0
+    right: 0
+    left: 0
+    width: 100%
+    border-bottom: 1px solid $pink
+  &:hover
+    &:after
+      animation-duration: 0.65s
+      animation-name: underline
+@keyframes underline
+  from
+    width: 0
+  to
+    width: 100%
+//btn-transp-withoutBorder end
+//pink-btn
+.pink-btn
+  width: 170px
+  height: 45px
+  display: flex
+  justify-content: center
+  align-items: center
+  background: $pink
+  line-height: 1
+  border-radius: 25px
+  font-family: $accent-font
+  font-size: 14px
+  font-weight: 500
+  text-transform: uppercase
+  text-decoration: none
+  color: #ffffff
+  @extend .shadow_btn
+  transition: all ease-in-out 0.25s
+  &:hover
+    background: $pink-hover
+    box-shadow: none
+.back-btn
+  margin: 0 auto 50px
+  @media (max-width: 1024px)
+    margin-bottom: 25px
+//pink-btn end
+//btns end
+
+//about-section
+.about-section
+  position: relative
+  padding-top: 110px
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  flex-wrap: wrap
+  z-index: 3
+  margin-bottom: 60px
+  @media (max-width: 1024px)
+    padding-top: 145px
+    margin-bottom: 65px
+  @media (max-width: 600px)
+    padding-top: 28px
+    margin-bottom: 30px
+  .title-section
+    top: 0
+    left: 135px
+    z-index: -1
+    @media (max-width: 1280px)
+      left: 30px
+    @media (max-width: 1024px)
+      top: 30px
+      left: auto
+      right: 0
+    @media (max-width: 600px)
+      top: 0
+    .text1
+      margin-left: 35px
+      @media (max-width: 1024px)
+        margin-left: 27px
+    .text3
+      margin-left: 155px
+      @media (max-width: 600px)
+        margin-left: 105px
+    .text4
+      margin-left: 210px
+      @media (max-width: 1024px)
+        margin-left: 216px
+      @media (max-width: 600px)
+        margin-left: 145px
+      @media (max-width: 400px)
+        margin-left: 96px
+  .about-description, .about-inf
+    z-index: 5
+  .about-description
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    @media (max-width: 1024px)
+      margin-bottom: 25px
+    @media (max-width: 600px)
+      margin-bottom: 0
+  .img-wrapper
+    width: 560px
+    min-width: 560px
+    height: 500px
+    min-height: 500px
+    @extend .shadow_photo
+    @media (max-width: 1400px)
+      width: 500px
+      min-width: 500px
+      height: 450px
+      min-height: 450px
+    @media (max-width: 1280px)
+      width: 400px
+      min-width: 400px
+      height: 340px
+      min-height: 340px
+    @media (max-width: 1024px)
+      display: none
+    img
+      +imgCover()
+  .about-inf
+    position: relative
+    margin: -150px 100px 0 auto
+    @media (max-width: 1280px)
+      margin: -44px 0 0 auto
+    @media (max-width: 1024px)
+      margin-top: 0
+    @media (max-width: 770px)
+      padding: 20px 20px 25px 20px
+  .about-text
+    width: 530px
+    min-width: 530px
+    margin-right: 180px
+    display: flex
+    flex-flow: column
+    justify-content: flex-start
+    align-items: flex-start
+    @media (max-width: 1280px)
+      margin-right: 80px
+      width: 450px
+      min-width: 450px
+    @media (max-width: 1024px)
+      margin-right: 0
+      margin-bottom: 30px
+      width: 100%
+      min-width: 0
+    h1, .h1
+      margin-bottom: 30px
+      @media (max-width: 1024px)
+        margin-bottom: 20px
+//about-section end
+
+//about-inf
+.about-inf
+  width: 100%
+  max-width: 770px
+  background: $custom-color
+  @extend .shadow_color_box
+  padding: 55px 50px 40px
+  display: flex
+  flex-flow: column nowrap
+  justify-content: space-between
+  align-items: flex-end
+  position: relative
+  overflow: hidden
+  @media (max-width: 770px)
+    padding: 20px 30px 25px 20px
+  .title-section
+    top: auto
+    bottom: -30px
+    left: -8px
+    @media (max-width: 600px)
+      bottom: -17px
+    & *
+      color: $title-color-dark
+    .text1
+      margin-left: 74px
+      @media (max-width: 1024px)
+        margin-left: 20px
+    .text2
+      margin-top: -23px
+  ul
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-bottom: 15px
+    width: 100%
+    @media (max-width: 1024px)
+      margin-bottom: 0
+  .about-inf-item
+    width: 50%
+    color: #ffffff
+    font-family: $accent-font
+    font-size: 24px
+    line-height: 35px
+    font-weight: 600
+    margin-bottom: 35px
+    padding-left: 23px
+    position: relative
+    @media (max-width: 1024px)
+      font-size: 18px
+      line-height: 26px
+      padding-left: 14px
+    @media (max-width: 770px)
+      width: 100%
+      margin-bottom: 20px
+    &:before
+      content: ''
+      display: inline-block
+      width: 10px
+      height: 10px
+      background: $pink
+      border-radius: 50%
+      position: absolute
+      top: 0.5em
+      left: 0
+      @media (max-width: 1024px)
+        width: 6px
+        height: 6px
+        top: 0.55em
+    &:nth-child(odd)
+      padding-right: 40px
+      @media (max-width: 770px)
+        padding-right: 0
+//about-inf end
+
+//offer-section
+.offer-section
+  border: 10px solid $title-color-light
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  flex-wrap: wrap
+  padding: 70px 60px 0
+  margin-top: -190px
+  @media (max-width: 1280px)
+    margin-top: -110px
+    margin-bottom: 25px
+    padding: 70px 50px 0
+  @media (max-width: 1024px)
+    margin-top: 0
+    padding: 40px 40px 50px 40px
+    margin-bottom: 65px
+  @media (max-width: 600px)
+    padding: 30px 30px 30px 25px
+    margin-bottom: 25px
+  .title-section
+    position: relative
+    margin: 0 45px 60px 0
+    @media (max-width: 1024px)
+      margin: 0 auto 20px 0
+    @media (max-width: 600px)
+      margin: -30px auto 20px -30px
+    .text2
+      margin-top: -25px
+      @media (max-width: 1024px)
+        margin-top: -13px
+        margin-left: 4px
+  .offer-desc
+    width: 100%
+    max-width: 430px
+    margin-top: 102px
+    max-height: 90px
+    overflow: hidden
+    @media (max-width: 1280px)
+      max-width: 400px
+      margin-top: 75px
+    @media (max-width: 1024px)
+      max-width: none
+      margin-top: 0
+  .offer-list
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-bottom: 20px
+    @media (max-width: 1024px)
+      margin-bottom: 15px
+    .offer-item
+      width: 26%
+      margin-bottom: 40px
+      padding-right: 30px
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      @media (max-width: 1280px)
+        width: 30%
+      @media (max-width: 1024px)
+        width: 50%
+      @media (max-width: 600px)
+        width: 100%
+        margin-bottom: 20px
+    .to-offer-link
+      font-family: $accent-font
+      font-size: 18px
+      line-height: 21px
+      font-weight: 700
+      color: #000
+      text-decoration: none
+      position: relative
+      &:after
+        content: ''
+        display: block
+        width: 10px
+        height: 10px
+        background: url('../images/arrow-play.svg') center no-repeat
+        background-size: contain
+        position: absolute
+        top: calc(50% - 5px)
+        right: -18px
+      &:hover
+        color: $pink
+        text-decoration: underline
+        &:after
+          background: url('../images/arrow-play-hover.svg') center no-repeat
+          background-size: contain
+  .btn-transparent
+    margin: 0 0 60px auto
+    @media (max-width: 1024px)
+      margin: 0 auto
+//offer-section end
+
+
+//home-description-section
+.home-desc-section
+  @media (max-width: 1024px)
+    margin-bottom: 65px
+  @media (max-width: 600px)
+    margin-bottom: 25px
+  .img-wrapper
+    width: 670px
+    height: 335px
+    margin: -105px auto auto 105px
+    overflow: hidden
+    @extend .shadow_photo
+    position: relative
+    z-index: 2
+    @media (max-width: 1280px)
+      margin: -70px auto auto 30px
+    @media (max-width: 1024px)
+      display: none
+    img
+      +imgCover()
+  .colored-section-inf
+    margin: -165px auto auto 300px
+    @media (max-width: 1280px)
+      margin-right: 30px
+      margin-left: auto
+    @media (max-width: 1024px)
+      margin-top: 0
+//colored-section-inf
+.colored-section-inf
+  width: 770px
+  background: $custom-color
+  position: relative
+  z-index: 10
+  @extend .shadow_color_box
+  padding: 50px 50px 45px
+  margin-bottom: 40px
+  @media (max-width: 1024px)
+    width: 100%
+    padding: 30px 25px 35px
+  .pink-btn
+    margin: 25px 0 0 auto
+.colored-desc-title
+  color: #ffffff
+  font-family: $accent-font
+  font-size: 26px
+  line-height: 1
+  font-weight: 400
+  padding-bottom: 10px
+  border-bottom: 1px solid $pink
+  @media (max-width: 1024px)
+    line-height: 1.4
+  @media (max-width: 600px)
+    font-size: 20px
+.colored-desc-inf
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  padding-top: 45px
+  @media (max-width: 770px)
+    flex-flow: column
+    justify-content: flex-start
+    align-items: center
+    padding-top: 30px
+  .desc-inf-item
+    width: 20%
+    height: 110px
+    position: relative
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    @media (max-width: 770px)
+      width: 100%
+      justify-content: center
+      margin-top: 40px
+    &:last-child
+      margin-right: 0
+      width: 17%
+      @media (max-width: 770px)
+        width: 100%
+    &:first-child
+      @media (max-width: 770px)
+        margin-top: 0
+      &:after
+        display: none
+    &:after
+      content: ''
+      display: inline-block
+      position: absolute
+      left: -50px
+      width: 20px
+      height: 25px
+      background: url('../images/arrow_pink.svg') center no-repeat
+      background-size: 15px 20px
+      @media (max-width: 770px)
+        top: -31px
+        left: calc(50% - 10px)
+        transform: rotate(90deg)
+    .inf-item-bgImg
+      position: absolute
+      top: 0
+      left: -10px
+      font-family: $accent-font
+      font-size: 140px
+      line-height: 0.7
+      font-weight: 800
+      color: $title-color-dark
+      width: 100%
+      height: 100%
+      background-size: contain
+      @media (max-width: 770px)
+        left: 0
+    .inf-item-text
+      color: #ffffff
+      font-family: $main-font
+      font-size: 18px
+      line-height: 1.2
+      position: relative
+      z-index: 15
+      width: 100%
+      max-width: 120px
+      @media (max-width: 770px)
+        max-width: 260px
+        text-align: center
+//colored-section-inf end
+//home-description-section end
+
+
+//guarantees-section
+.guarantees-section
+  border: 10px solid $title-color-light
+  margin-top: -45px
+  padding: 70px 60px 0
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  flex-flow: column wrap
+  @media (max-width: 1280px)
+    margin-top: -50px
+  @media (max-width: 1024px)
+    margin-top: 0
+    margin-bottom: 65px
+    padding: 35px 40px 50px 40px
+  @media (max-width: 600px)
+    margin-bottom: 25px
+    padding: 30px 35px 30px 30px
+  .title-section
+    position: relative
+    margin-bottom: 35px
+    @media (max-width: 1024px)
+      margin: 0 auto 45px 0
+    @media (max-width: 600px)
+      margin: -37px auto 25px -22px
+    .text2
+      @media (max-width: 1024px)
+        max-width: 433px
+        word-wrap: break-word
+        line-height: .8
+        margin-top: 0
+      @media (max-width: 600px)
+        max-width: 250px
+  .btn-transp-withoutBorder
+    margin: 0 0 60px auto
+    @media (max-width: 1024px)
+      margin: 0 auto
+  .guarantees-item
+    width: 50%
+    padding-right: 85px
+    margin-bottom: 50px
+    @media (max-width: 1024px)
+      width: 100%
+      padding-right: 0
+      margin-bottom: 45px
+    @media (max-width: 600px)
+      margin-bottom: 30px
+    h3, .h3
+      font-size: 24px
+      line-height: 36px
+      @media (max-width: 1024px)
+        font-size: 18px
+        line-height: 21px
+        margin-bottom: 5px
+      a
+        &:after
+          width: 13px
+          height: 13px
+          top: 0.4em
+          right: -26px
+          @media (max-width: 1024px)
+            width: 10px
+            height: 10px
+            right: -20px
+//guarantees-section end
+
+//guarantees-items
+.guarantees-items
+  display: flex
+  justify-content: flex-start
+  align-items: stretch
+  flex-wrap: wrap
+  width: 100%
+  @media (max-width: 600px)
+    margin-bottom: 10px
+.guarantees-item
+  width: 100%
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  flex-flow: column wrap
+  margin-bottom: 35px
+  @media (max-width: 1024px)
+    margin-bottom: 30px
+  h3, .h3
+    font-size: 31px
+    line-height: 37px
+    margin-bottom: 20px
+    width: 100%
+    @media (max-width: 1024px)
+      font-size: 18px
+      line-height: 21px
+      margin-bottom: 15px
+    a
+      text-decoration: none
+      font-family: inherit
+      font-size: inherit
+      line-height: inherit
+      color: inherit
+      font-weight: inherit
+      position: relative
+      &:after
+        content: ''
+        display: block
+        width: 17px
+        height: 17px
+        background: url('../images/arrow-play.svg') center no-repeat
+        background-size: contain
+        position: absolute
+        top: 0.45em
+        right: -30px
+        @media (max-width: 1024px)
+          width: 10px
+          height: 10px
+          top: 0.4em
+          right: -15px
+      &:hover
+        color: $pink
+        text-decoration: underline
+        &:after
+          background: url('../images/arrow-play-hover.svg') center no-repeat
+          background-size: contain
+  p
+    width: 100%
+//guarantees-items
+
+
+//prices-section
+.prices-section
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  margin-bottom: 60px
+  @media (max-width: 1280px)
+    margin-bottom: 50px
+  @media (max-width: 1024px)
+    margin-bottom: 65px
+  @media (max-width: 600px)
+    margin-bottom: 25px
+  .calculator-section
+    margin-top: -85px
+    @media (max-width: 1024px)
+      margin-top: 0
+  .title-section
+    position: relative
+    margin: 120px auto auto -15px
+    z-index: 5
+    @media (max-width: 1024px)
+      display: none
+    .text2
+      width: 285px
+      line-height: 0.65
+      text-align: right
+      margin: -7px auto 0 35px
+      word-break: break-all
+      @media (max-width: 1280px)
+        width: 260px
+
+.calculator-section
+  position: relative
+  margin: 0 auto auto 105px
+  width: 770px
+  padding: 50px 55px
+  background: $custom-color
+  @extend .shadow_color_box
+  z-index: 10
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  flex-flow: column nowrap
+  @media (max-width: 1280px)
+    margin-left: 30px
+    padding: 40px
+  @media (max-width: 1024px)
+    margin-left: 0
+    width: 100%
+    padding: 35px 40px
+  @media (max-width: 770px)
+    padding: 20px 17px 30px
+  .row, .col
+    width: 100%
+    margin-bottom: 30px
+    @media (max-width: 6003px)
+      margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+  .row1, .row4
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    @media (max-width: 600px)
+      flex-flow: column
+      justify-content: center
+      align-items: flex-start
+  // type-task
+  .type-task
+    width: 100%
+    margin-right: 70px
+    position: relative
+    @media (max-width: 600px)
+      margin-right: 0
+      margin-bottom: 25px
+  .select-section
+    width: 100%
+    max-width: 470px
+    height: 49px
+    @media (max-width: 600px)
+      height: 40px
+    select, option
+      border: none
+      font-family: $accent-font
+      color: #ffffff
+      font-size: 16px
+      line-height: 1
+      font-weight: 300
+      width: 100%
+      height: 100%
+      background: $title-color-dark
+      border-radius: 3px
+      padding: 15px 15px 15px 25px
+      @media (max-width: 600px)
+        font-size: 14px
+        padding: 5px 15px 5px 20px
+    .select-btn
+      background: url("../images/arrow_white.svg") center no-repeat
+      background-size: $bgSize_selectBtn
+  input, textarea
+    border: none
+    font-family: $accent-font
+    color: #ffffff
+    font-size: 16px
+    line-height: 1
+    font-weight: 300
+    width: 100%
+    height: 100%
+    background: $title-color-dark
+    border-radius: 3px
+    padding: 15px 15px 15px 25px
+    @media (max-width: 600px)
+      font-size: 14px
+      padding: 5px 15px 5px 20px
+    &::placeholder
+      font-family: inherit
+      font-size: inherit
+      color: inherit
+      line-height: inherit
+  // type-task end
+
+  // counter-box
+  .counter-box
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+    flex-flow: column nowrap
+    width: 123px
+    @media (max-width: 600px)
+      width: 100%
+      flex-flow: row
+      flex-wrap: wrap
+  .title-row-form
+    color: $small-title-color-dark
+    font-family: $accent-font
+    font-weight: 700
+    font-size: 18px
+    line-height: 21px
+    margin-bottom: 10px
+    @media (max-width: 600px)
+      width: 100%
+      font-size: 16px
+  .sub-desc
+    color: $small-title-color-dark
+    font-family: $accent-font
+    font-size: 12px
+    margin: 0 0 0 auto
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    @media (max-width: 600px)
+      margin: auto auto auto 15px
+    span
+      color: inherit
+      font-family: inherit
+      font-size: inherit
+      &.numberWordsCounter
+        margin-right: 4px
+  .counter
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    background: $title-color-dark
+    padding: 10px 10px
+    margin-bottom: 10px
+    border-radius: 3px
+    overflow: hidden
+    height: 49px
+    @media (max-width: 600px)
+      width: 123px
+      height: 40px
+    .counterBtn, input
+      background: transparent
+      border: none
+      color: #ffffff
+    .counterBtn
+      width: 25px
+      height: 32px
+      padding: 0
+    .down-btn
+      background: url('../images/arrow_white.svg') center no-repeat
+      background-size: 10px 13px
+      transform: rotate(90deg)
+    .up-btn
+      background: url('../images/arrow_white.svg') center no-repeat
+      background-size: 10px 13px
+      transform: rotate(-90deg)
+    input
+      font-family: $main-font
+      font-size: 16px
+      line-height: 1
+      width: 44px
+      padding: 5px 0
+      text-align: center
+  // counter-box end
+
+  //runner-line
+  .runner-line
+    width: 100%
+    ul
+      width: inherit
+      list-style: none
+      margin: 0
+      padding: 0 15px
+      display: flex
+      justify-content: space-between
+      align-items: stretch
+      position: relative
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 4px
+        right: 15px
+        left: 15px
+        width: calc(100% - 32px)
+        height: 2px
+        background: $pink
+      li
+        display: block
+        position: relative
+        padding-left: 0
+        margin-bottom: 0
+        margin-right: 10px
+        @media (max-width: 600px)
+          margin-bottom: 10px
+        &:before
+          display: none
+        &:last-child
+          margin-right: 0
+        input[type="radio"]
+          padding: 0
+          margin: 0
+          position: absolute
+          visibility: hidden
+        label
+          position: relative
+          cursor: pointer
+          display: flex
+          flex-flow: column
+          justify-content: space-between
+          align-items: center
+          height: 35px
+          &:before
+            content: ''
+            display: block
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background: $pink
+            border: 1px solid transparent
+            box-sizing: border-box
+            position: absolute
+            top: 0
+          .title
+            font-family: "Montserrat", sans-serif
+            font-size: 16px
+            line-height: 1
+            color: #FFFFFF
+            position: absolute
+            bottom: 0
+    input[type="radio"]:checked ~ label:before
+      top: -2px
+      width: 14px
+      height: 14px
+      background: #FFFFFF
+      border: 1px solid #f83d70
+  //runner-line
+
+
+  //radioBtn-group
+  .radioBtn-group
+    ul
+      width: 100%
+      list-style: none
+      margin: 0
+      padding: 0
+      display: flex
+      justify-content: space-between
+      align-items: stretch
+      flex-wrap: wrap
+      @media (max-width: 600px)
+        flex-flow: column
+        align-items: flex-start
+        justify-content: center
+      li
+        display: block
+        position: relative
+        padding-left: 0
+        margin-bottom: 0
+        margin-right: 10px
+        @media (max-width: 600px)
+          margin-bottom: 10px
+        &.inactive-item
+          label
+            color: $small-title-color-dark
+            cursor: default
+          &:hover
+            label
+              color: $small-title-color-dark
+              border-bottom-color: transparent
+        &:before
+          display: none
+        &:last-child
+          margin-right: 0
+        &:hover
+          label
+            color: $pink
+            border-bottom: 1px solid $pink
+        input[type="radio"]
+          position: absolute
+          visibility: hidden
+        label
+          color: #FFFFFF
+          font-family: $accent-font
+          font-size: 14px
+          line-height: 21px
+          font-weight: 700
+          display: block
+          position: relative
+          padding-bottom: 7px
+          cursor: pointer
+          transition: all 0.15s linear
+          border-bottom: 1px solid transparent
+          @media (max-width: 600px)
+            padding-bottom: 2px
+    input[type="radio"]:checked ~ label
+      color: $pink
+      border-bottom: 1px solid $pink
+    .inactive-item
+      input[type="radio"]:checked ~ label
+        color: $small-title-color-dark
+        border-bottom-color: transparent
+  //radioBtn-group end
+
+  //runner-section
+  .runner-section
+    width: 100%
+    .time-line, .price-line
+      width: inherit
+      margin-bottom: 40px
+      @media (max-width: 600px)
+        margin-bottom: 30px
+  //runner-section end
+  .pink-btn
+    border: none
+    margin: 0 0 0 auto
+    cursor: pointer
+    padding: 15px
+    @media (max-width: 600px)
+      margin: 0 auto 0
+  input[type="submit"].pink-btn
+    @extend .pink-btn
+//prices-section end
+
+
+
+//select-section
+.select-section
+  position: relative
+  select, option
+    background: $title-color-light
+    color: #abaec6
+    border: none
+    font-family: $accent-font
+    font-size: 16px
+    line-height: 1
+    font-weight: 300
+    width: 100%
+    height: 100%
+    border-radius: 3px
+    padding: 15px 15px 15px 25px
+    -webkit-appearance: none
+    -ms-appearance: none
+    -moz-appearance: none
+    appearance: none
+    @media (max-width: 600px)
+      font-size: 14px
+      padding: 5px 15px 5px 20px
+  select::-ms-expand
+    display: none
+    opacity: 0
+.select-btn
+  display: inline-block
+  width: 25px
+  height: 25px
+  position: absolute
+  bottom: 12px
+  right: 18px
+  background: url('../images/arrow_abaec6.svg') center no-repeat
+  background-size: $bgSize_selectBtn
+  transform: rotate(90deg)
+  pointer-events: none
+  @media (max-width: 600px)
+    bottom: 8px
+    right: 15px
+//select-section end
+
+
+
+//total-price
+.total-price
+  display: inline-flex
+  justify-content: flex-start
+  align-items: flex-end
+  @media (max-width: 600px)
+    width: 100%
+    margin-bottom: 30px
+  .title
+    font-family: $accent-font
+    font-size: 18px
+    line-height: 21px
+    font-weight: 700
+    color: #ffffff
+    margin-right: 8px
+  .znak, .res
+    font-family: $accent-font
+    font-weight: 400
+    font-size: 31px
+    line-height: 31px
+    color: $pink
+//total-price end
+
+//home-page-content
+.home-page-content
+  .faq-section
+    padding-top: 60px
+    @media (max-width: 600px)
+      padding-top: 25px
+    .title-section
+      top: 10px
+//home-page-content end
+
+
+//faq-section
+.faq-section
+  position: relative
+  margin-bottom: 40px
+  @media (max-width: 1024px)
+    margin-bottom: 55px
+  @media (max-width: 600px)
+    margin-bottom: 15px
+  .collapse-item
+    width: 50%
+    padding-right: 40px
+    @media (max-width: 1024px)
+      width: 100%
+    p
+      max-width: 430px
+      @media (max-width: 1024px)
+        max-width: none
+  .title-section
+    top: -45px
+    right: 280px
+    left: auto
+    z-index: 2
+    @media (max-width: 1024px)
+      right: 0
+      top: -50px
+    @media (max-width: 600px)
+      top: -25px
+//faq-section end
+
+//collapse
+.collapse-section
+  display: flex
+  justify-content: flex-start
+  align-items: stretch
+  flex-wrap: wrap
+.collapse-item
+  width: 100%
+  position: relative
+  z-index: 10
+  margin-bottom: 20px
+  &.active-item
+    &>.title-collapse-item
+      .arrow
+        background: url('../images/arrow_pink.svg') center no-repeat
+        background-size: 15px 20px
+        transform: rotate(0)
+        @media (max-width: 1024px)
+          background-size: 17px 17px
+      h3, .h3
+        color: $pink
+    &>.content-collapse-item
+      //display: flex
+      opacity: 1
+      height: auto
+      transition: all ease 0.375s
+  .title-collapse-item
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    cursor: pointer
+    margin-bottom: 15px
+    transition: 0.25s
+    @media (max-width: 1024px)
+      margin-bottom: 10px
+    &:hover
+      .arrow
+        background: url('../images/arrow_pink.svg') center no-repeat
+        background-size: 15px 20px
+        transform: rotate(0)
+        @media (max-width: 1024px)
+          background-size: 17px 17px
+      h3, .h3
+        color: $pink
+    .arrow
+      width: 30px
+      height: 28px
+      background: url('../images/arrow_black.svg') center no-repeat
+      background-size: 15px 20px
+      transform: rotate(90deg)
+      margin: 5px 15px auto 0
+      transition: all ease-in-out 0.2s
+      @media (max-width: 1024px)
+        width: 20px
+        height: 20px
+        background-size: 17px 17px
+        margin: 0 10px auto 0
+    h3, .h3
+      transition: all ease-in-out 0.2s
+      font-weight: 600
+  &>.content-collapse-item
+    width: 100%
+    flex-flow: column
+    justify-content: flex-start
+    align-items: flex-start
+    display: flex
+    opacity: 0
+    height: 0
+    overflow: hidden
+    transition: all ease 0.375s
+  .collapse-item
+    margin-bottom: 10px
+    &.active-item
+      margin-bottom: 25px
+//collapse end
+
+
+//footer
+footer
+  background: $custom-color
+  @extend .shadow_footer
+  .wrapper
+    width: 100%
+    max-width: 1500px
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    padding: 60px 165px 55px 65px
+    @media (max-width: 770px)
+      flex-flow: column-reverse
+      justify-content: center
+      align-items: center
+      padding: 25px 15px 0
+  .copyright-section
+    background: $pink
+    @extend .shadow_color_box
+    .wrapper
+      padding-top: 10px
+      padding-bottom: 10px
+      align-items: center
+      @media (max-width: 770px)
+        flex-flow: row
+        justify-content: space-between
+  .copyright
+    font-size: 10px
+    line-height: 15px
+    color: #ffffff
+    font-family: $accent-font
+  .page-link
+    width: 140px
+    height: 15px
+    background: url('../images/logo-page-white.svg') center no-repeat
+    background-size: contain
+  .img-logo
+    display: block
+    margin-bottom: 50px
+    @media (max-width: 770px)
+      margin-bottom: 30px
+    svg
+      width: 60px!important
+      height: 60px!important
+  .follow-section
+    flex-flow: column wrap
+    align-items: flex-start
+    @media (max-width: 770px)
+      margin: 0 auto 30px
+    .follow-title
+      margin-bottom: 17px
+      font-size: 18px
+      line-height: 21px
+      font-weight: 700
+      @media (max-width: 1024px)
+        font-size: 16px
+      @media (max-width: 770px)
+        display: none
+    ul
+      margin-left: 0
+      li
+        margin-right: 35px
+        &:last-child
+          margin-right: 0
+      a
+        svg
+          width: 22px!important
+          height: 20px!important
+          @media (max-width: 1024px)
+            width: 17px!important
+            height: 15px!important
+  .col
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-flow: column nowrap
+    @media (max-width: 770px)
+      justify-content: center
+      align-items: center
+      width: 100%
+  .col1
+    @media (max-width: 1024px)
+      justify-content: space-between
+    @media (max-width: 770px)
+      flex-flow: column-reverse
+  .row
+    margin-bottom: 35px
+  .row, .footer-menu ul
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-wrap: wrap
+  .footer-menu
+    @media (max-width: 1024px)
+      margin-bottom: 20px
+    ul
+      li
+        margin-right: 45px
+        @media (max-width: 1280px)
+          margin-right: 40px
+        @media (max-width: 1024px)
+          margin-right: 20px
+          margin-bottom: 15px
+        @media (max-width: 770px)
+          margin-right: 10px
+        &:last-child
+          margin-right: 0
+        &:hover
+          a
+            +activeItem()
+      a
+        font-family: $accent-font
+        font-size: 16px
+        line-height: 21px
+        color: #ffffff
+        font-weight: 400
+        text-transform: uppercase
+        text-decoration: none
+        @media (max-width: 1280px)
+          font-size: 15px
+        @media (max-width: 1024px)
+          font-size: 14px
+        @media (max-width: 770px)
+          font-size: 12px
+          text-transform: none
+
+
+  .address-section
+    margin-bottom: 20px
+    @media (max-width: 770px)
+      margin: 0 auto 35px
+  .address
+    margin-bottom: 10px
+    color: #ffffff
+    font-family: $accent-font
+    font-size: 14px
+    line-height: 21px
+    font-weight: 400
+    @media (max-width: 770px)
+      font-size: 18px
+      margin-bottom: 20px
+    &:last-child
+      @media (max-width: 770px)
+        margin-bottom: 0
+    span
+      font-size: inherit
+      font-family: inherit
+      line-height: inherit
+      font-weight: inherit
+      color: inherit
+      @media (max-width: 770px)
+        display: none
+
+  .enter-your-email
+    position: relative
+    width: 100%
+    margin-bottom: 0
+    @media (max-width: 770px)
+      max-width: 600px
+    @media (max-width: 770px)
+      margin-bottom: 35px
+    input
+      background: transparent
+      border: solid $small-title-color-dark
+      border-width: 0 0 1px 0
+      width: 100%
+      font-family: $accent-font
+      font-size: 31px
+      line-height: 28px
+      color: $small-title-color-dark
+      font-weight: 300
+      padding: 10px 0
+      @media (max-width: 1024px)
+        font-size: 20px
+        padding-bottom: 5px
+      &::placeholder
+        font-family: inherit
+        font-size: inherit
+        line-height: inherit
+        color: inherit
+        font-weight: inherit
+
+    .link-to-sing-up
+      position: absolute
+      bottom: 7px
+      right: 0
+      font-family: $accent-font
+      font-size: 14px
+      line-height: 31px
+      font-weight: 700
+      color: $pink
+      text-transform: uppercase
+      text-decoration: none
+      @media (max-width: 1024px)
+        bottom: 0
+
+//footer end
+
+
+//btn-to-top
+.btn-to-top
+  opacity: 0
+  cursor: default
+  width: 55px
+  height: 55px
+  background: url('../images/arrow_pink.svg') center no-repeat
+  background-size: 23px 38px
+  padding: 0
+  transform: rotate(-90deg)
+  position: fixed
+  right: 50px
+  bottom: 140px
+  z-index: 1000
+  transition: all ease-in-out 0.15s
+  @media (max-width: 1024px)
+    right: 0
+  &.active-item
+    opacity: 1
+    cursor: pointer
+//btn-to-top end
+
+
+//single-article
+.single-article
+  padding-top: 90px
+  @media (max-width: 1024px)
+    padding-top: 60px
+  @media (max-width: 600px)
+    padding-top: 15px
+  h1, .h1
+    margin-bottom: 30px
+    @media (max-width: 1024px)
+      margin-bottom: 15px
+    @media (max-width: 600px)
+      margin-bottom: 10px
+  .wrapper
+    position: relative
+    @media (max-width: 600px)
+      padding-top: 25px
+    &>.title-section
+      position: absolute
+      top: 8px
+      right: 200px
+      @media (max-width: 1280px)
+        right: 0
+      @media (max-width: 1024px)
+        top: 15px
+        right: 15px
+      & *
+        @media (max-width: 1024px)
+          word-break: break-all
+          line-height: 0.8
+      .text2
+        @media (max-width: 1024px)
+          margin-top: 0
+          text-align: right
+  .content-wrapper
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+    position: relative
+    @media (max-width: 1024px)
+      flex-flow: column
+      align-items: flex-start
+    hr
+      border: none
+      background: $pink
+      height: 1px
+      width: 100%
+      margin: 0 0 30px
+    .accent-information
+      display: block
+      p
+        font-family: $accent-font
+        font-weight: 700
+        &:last-child
+          margin-bottom: 30px
+  .content
+    width: 100%
+    max-width: 670px
+    margin-right: 35px
+    z-index: 5
+    position: relative
+    padding-bottom: 85px
+    @media (max-width: 1280px)
+      max-width: 500px
+    @media (max-width: 1024px)
+      max-width: none
+      padding-bottom: 5px
+      margin-right: 0
+    .colored-section-inf, .about-inf
+      margin-top: 40px
+      @media (max-width: 1024px)
+        margin: 55px 0
+      @media (max-width: 600px)
+        margin: 30px 0
+    &>p
+      &:last-child
+        margin-bottom: 30px
+  // sidebar
+  .sidebar
+    width: 100%
+    max-width: 470px
+    position: relative
+    z-index: 2
+    @media (max-width: 1024px)
+      max-width: none
+      padding-top: 30px
+    @media (max-width: 600px)
+      padding-top: 0
+    .custom-img-2
+      height: 380px
+      margin-bottom: 60px
+      @media (max-width: 1024px)
+        display: none
+    h3, .h3
+      font-size: 18px
+      line-height: 21px
+      margin-bottom: 15px
+      @media (max-width: 1024px)
+        margin-bottom: 10px
+    p
+      font-family: $accent-font
+      font-size: 14px
+      line-height: 26px
+      font-weight: 500
+    // guarantees in sidebar
+    .guarantees-section
+      @media (min-width: 1280px)
+        padding-top: 100px
+      @media (min-width: 1025px)
+        margin-top: 0
+        padding: 125px 40px 0 35px
+        position: relative
+      @media (max-width: 1024px)
+        margin-bottom: 65px
+      @media (max-width: 600px)
+        margin-bottom: 25px
+      .title-section
+        @media (min-width: 1025px)
+          position: absolute
+          top: 0
+          right: 0
+        @media (max-width: 1024px)
+          position: relative
+        .text2
+          line-height: 0.7
+          word-break: break-all
+          text-align: left
+          @media (min-width: 1025px)
+            font-size: 110px
+            max-width: 340px
+            margin-top: -3px
+      .guarantees-items
+        @media (min-width: 1025px)
+          position: relative
+          z-index: 20
+          margin-bottom: 30px
+      .guarantees-item
+        width: 100%
+        padding-right: 0
+        @media (min-width: 1025px)
+          margin-bottom: 30px
+        h3, .h3
+          a
+            &:after
+              width: 10px
+              height: 10px
+              top: 0.4em
+              right: -20px
+      .btn-transp-withoutBorder
+        @media (max-width: 1024px)
+          margin: 0 auto
+    // guarantees in sidebar end
+
+    // benefits in sidebar
+    .benefits-section
+      @media (min-width: 1025px)
+        position: relative
+        overflow: hidden
+        padding: 50px 30px 0 45px
+      @media (max-width: 1024px)
+        padding-bottom: 50px
+      @media (max-width: 600px)
+        padding-bottom: 25px
+      .title-section
+        @media (min-width: 1025px)
+          position: absolute
+          top: 0
+          left: 0
+          right: auto
+        & *
+          @media (min-width: 1025px)
+            text-align: left
+        .text1
+          @media (min-width: 1281px)
+            margin: -35px auto 0 26px
+          @media (min-width: 1025px)
+            font-size: 100px
+            margin-top: -20px
+        .text2
+          @media (min-width: 1281px)
+            font-size: 110px
+            margin: -40px auto 0 -6px
+          @media (min-width: 1025px)
+            font-size: 100px
+            margin-top: -35px
+            margin-left: -6px
+          @media (max-width: 1024px)
+            text-transform: capitalize
+      .benefits-items
+        margin-bottom: 30px
+        @media (max-width: 600px)
+          margin-bottom: 5px
+        .benefits-item
+          width: 100%
+          margin-bottom: 10px
+          @media (max-width: 1024px)
+            margin-bottom: 5px
+          &:before
+            @media (max-width: 1024px)
+              top: 0.45em
+          &:nth-child(odd)
+            padding-right: 0
+          h3, .h3
+            font-size: 24px
+            line-height: 35px
+            font-weight: 500
+            @media (max-width: 600px)
+              margin-bottom: 20px
+              font-size: 18px
+              line-height: 21px
+  // benefits in sidebar end
+  // sidebar end
+  .btn-transp-withoutBorder
+    margin: 0 0 50px auto
+    @media (max-width: 1024px)
+      margin: 0 auto
+  figure
+    width: 100%
+    overflow: hidden
+    position: relative
+    z-index: 20
+    @extend .shadow_photo
+    img
+      +imgCover()
+      display: block
+  .colored-section-inf
+    position: relative
+    margin: -85px auto 50px
+    @media (max-width: 1280px)
+      margin-top: -40px
+    @media (max-width: 1024px)
+      margin-top: 0
+      margin-bottom: 65px
+    @media (max-width: 600px)
+      margin-bottom: 25px
+    .colored-desc-inf
+      @media (max-width: 1024px)
+        margin-bottom: 35px
+    .pink-btn
+      @media (max-width: 1024px)
+        margin: 0 auto
+  .collapse-item
+    h3, .h3
+      font-size: 31px
+      line-height: 37px
+      @media (max-width: 1024px)
+        font-size: 18px
+        line-height: 21px
+    .pink-btn
+      margin-bottom: 40px
+      @media (max-width: 1024px)
+        margin: 0 auto 30px
+  .about-inf
+    margin: -75px auto 100px
+    z-index: 100
+    @media (max-width: 1280px)
+      margin-top: -40px
+    @media (max-width: 1024px)
+      margin: 0 0 65px
+    @media (max-width: 600px)
+      margin-bottom: 25px
+    ul
+      @media (max-width: 1024px)
+        margin-bottom: 0
+    .btn-transp-withoutBorder
+      margin-bottom: 0
+  .prices-section
+    .calculator-section
+      margin-top: -75px
+      @media (max-width: 1280px)
+        margin-top: -70px
+      @media (max-width: 1024px)
+        margin-top: 0
+  //ul list
+  p+ul
+    margin-top: -20px
+  ul
+    margin-bottom: 30px
+    li
+      font-family: $main-font
+      color: #000
+      font-size: 16px
+      line-height: 31px
+      font-weight: 400
+      margin-bottom: 10px
+      padding-left: 15px
+      position: relative
+      &:before
+        content: ''
+        display: inline-block
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        background: $pink
+        position: absolute
+        left: 0
+        top: 0.75em
+
+//ul list end
+//single-article end
+
+//guarantees-page-content
+.guarantees-page-content
+  .title-section
+    .text1
+      @media (max-width: 1024px)
+        margin: 0 0 0 auto
+      @media (max-width: 600px)
+        max-width: calc(100% - 30px)
+  .guarantees-items
+    @media (max-width: 1024px)
+      margin-bottom: 0
+//guarantees-page-content end
+
+
+//benefits-section
+.benefits-section
+  width: 100%
+  border: 10px solid $title-color-light
+  padding: 55px 80px 0 70px
+  display: flex
+  justify-content: flex-start
+  align-items: stretch
+  flex-wrap: wrap
+  position: relative
+  @media (max-width: 1024px)
+    padding: 35px 40px 0 40px
+    margin-bottom: 65px
+  @media (max-width: 600px)
+    padding: 30px 30px 0 20px
+    margin-bottom: 25px
+    overflow: hidden
+  .title-section
+    position: relative
+    margin: 0 0 30px auto
+    @media (max-width: 1024px)
+      margin: -30px auto 15px 0
+    @media (max-width: 770px)
+      margin-left: -40px
+    @media (max-width: 600px)
+      margin-left: -30px
+    & *
+      text-align: right
+      @media (max-width: 600px)
+        text-align: left
+    .text1
+      margin-right: 85px
+      @media (max-width: 770px)
+        margin-right: 74px
+      @media (max-width: 600px)
+        margin-right: auto
+        margin-left: 23px
+    .text2
+      margin-top: 8px
+      @media (max-width: 770px)
+        font-size: 130px
+        margin-top: -18px
+      @media (max-width: 600px)
+        font-size: 80px
+        margin-left: -6px
+      @media (max-width: 390px)
+        word-break: break-all
+        max-width: 260px
+        line-height: 0.79
+        margin-top: -13px
+  figure
+    position: absolute
+    top: -150px
+    left: 95px
+    width: 670px
+    height: 335px
+    @media (max-width: 1280px)
+      width: 560px
+      height: 280px
+      top: -105px
+      left: 11px
+    @media (max-width: 1024px)
+      display: none
+  .benefits-items
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+    flex-wrap: wrap
+    margin-bottom: 60px
+    @media (max-width: 1024px)
+      margin-bottom: 0
+  .benefits-item
+    width: 50%
+    margin-bottom: 50px
+    padding-left: 25px
+    position: relative
+    @media (max-width: 1024px)
+      width: 100%
+      margin-bottom: 40px
+      padding-left: 15px
+    @media (max-width: 600px)
+      margin-bottom: 35px
+    &:nth-child(odd)
+      padding-right: 60px
+      @media (max-width: 1024px)
+        padding-right: 0
+    &:before
+      content: ''
+      display: inline-block
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: $pink
+      position: absolute
+      top: 0.8em
+      left: 0
+      @media (max-width: 1024px)
+        width: 6px
+        height: 6px
+        top: 0.7em
+    h3, .h3
+      margin-bottom: 20px
+      @media (max-width: 1024px)
+        margin-bottom: 15px
+//benefits-section end
+
+
+
+//about-page-content
+.about-page-content
+  .content-wrapper
+    margin-bottom: 70px
+    @media (max-width: 1024px)
+      margin-bottom: 0
+  .prices-section
+    flex-direction: row-reverse
+    margin-bottom: 165px
+    @media (max-width: 1280px)
+      margin-bottom: 100px
+    @media (max-width: 1024px)
+      margin-bottom: 65px
+    @media (max-width: 600px)
+      margin-bottom: 25px
+    .calculator-section
+      margin-right: 100px
+      margin-left: auto
+      @media (max-width: 1280px)
+        margin-right: 30px
+      @media (max-width: 1024px)
+        margin-right: 0
+    .title-section
+      margin: 100px -15px auto 0
+//about-page-content end
+
+
+//services-page-content
+.services-page-content
+  .wrapper
+    &>.title-section
+      .text1
+        font-size: 140px
+        @media (max-width: 1280px)
+          font-size: 130px
+        @media (max-width: 1024px)
+          font-size: 60px
+  .collapse-item
+    &:last-child
+      .pink-btn
+        @media (max-width: 1024px)
+          margin-bottom: 0
+        @media (max-width: 600px)
+          margin-bottom: 20px
+//services-page-content end
+
+//paper-details-section
+.paper-details-section
+  width: 100%
+  border: 10px solid $title-color-light
+  position: relative
+  padding: 45px 25px 0 40px
+  margin-bottom: 45px
+  overflow: hidden
+  @media (max-width: 770px)
+    padding: 30px 15px 40px 20px
+    margin-bottom: 25px
+  .title-section
+    left: -10px
+    bottom: -10px
+    z-index: 2
+    @media (max-width: 600px)
+      position: relative
+      bottom: 0
+      margin: -39px auto 10px -14px
+    .text1
+      @media (max-width: 1024px)
+        font-size: 80px
+  .details-title
+    font-family: $accent-font
+    font-size: 24px
+    font-weight: 700
+    color: #000
+    margin-bottom: 35px
+    @media (max-width: 600px)
+      margin-bottom: 20px
+  .details-desc
+    @media (max-width: 600px)
+      margin-bottom: 15px
+    .row
+      display: flex
+      justify-content: space-between
+      align-items: center
+    .row, li
+      margin-bottom: 20px
+  .name-details
+    font-family: $accent-font
+    font-size: 14px
+    line-height: 21px
+    font-weight: 700
+    color: $title-color-dark
+    white-space: nowrap
+    @media (max-width: 1024px)
+      margin-right: 15px
+  .desc-details, .list-pink-disc li
+    font-family: $accent-font
+    font-size: 14px
+    line-height: 21px
+    font-weight: 400
+    color: #000
+  .list-pink-disc
+    li
+      @media (max-width: 600px)
+        margin-bottom: 15px
+  .desc-details
+    text-align: right
+
+.paper-details-content
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  position: relative
+  z-index: 5
+  margin-bottom: 20px
+  @media (max-width: 600px)
+    flex-flow: column
+    margin-bottom: 0
+  .col
+    width: 50%
+    align-items: stretch
+    @media (max-width: 600px)
+      width: 100%
+    &:nth-child(odd)
+      padding-right: 60px
+      @media (max-width: 1280px)
+        padding-right: 30px
+      @media (max-width: 600px)
+        padding-right: 0
+.paper-details-btns
+  width: 100%
+  display: flex
+  justify-content: flex-end
+  align-items: flex-start
+  position: relative
+  z-index: 5
+  @media (max-width: 1024px)
+    padding-right: 10px
+  @media (max-width: 600px)
+    padding-right: 0
+    flex-flow: column
+    justify-content: flex-start
+    align-items: center
+  .btn-transp-withoutBorder
+    margin: 0 40px 40px 0
+    @media (max-width: 600px)
+      margin: 0 auto 30px
+    &:last-child
+      margin-right: 0
+      @media (max-width: 600px)
+        margin: 0 auto
+//paper-details-section end
+
+//list-pink-disc
+.list-pink-disc
+  ul
+    li
+      position: relative
+      padding-left: 15px
+      &:before
+        content: ''
+        display: inline-block
+        position: absolute
+        top: 0.5em
+        left: 0
+        width: 5px
+        height: 5px
+        background: $pink
+        border-radius: 50%
+//list-pink-disc end
+
+//table
+.custom-table1
+  table
+    border: 10px solid $title-color-light
+    margin-bottom: 45px
+    width: 100%
+    @media (max-width: 1024px)
+      margin-bottom: 0
+  tr
+    width: 100%
+    height: 73px
+    &:nth-child(odd)
+      background: $title-color-light
+    &:first-child
+      td
+        color: $pink
+  td
+    padding: 15px
+    &:first-child
+      color: #abaec6
+      padding-left: 25px
+      text-align: left
+    &:last-child
+      padding-right: 25px
+  td, td *
+    font-family: $accent-font
+    font-size: 14px
+    font-weight: 500
+    color: #787878
+    vertical-align: middle
+    text-align: right
+//table end
+
+
+//prices-page-content
+.prices-page-content
+  .price-table
+    margin-bottom: 45px
+    width: 100%
+    @media (max-width: 1024px)
+      overflow-x: auto
+      margin-bottom: 25px
+    td
+      width: 16.5%
+      @media (max-width: 1280px)
+        padding: 5px
+        font-size: 13px
+      &:first-child
+        @media (max-width: 1280px)
+          padding-left: 15px
+  .prices-section
+    .calculator-section
+      min-width: 770px
+      @media (max-width: 1280px)
+        min-width: 0
+    .title-section
+      margin-top: 115px
+//prices-page-content end
+
+//faq-page-content
+.faq-page-content
+  h1, .h1
+    @media (max-width: 1024px)
+      margin-bottom: 30px
+  .wrapper
+    .title-section
+      right: calc(50% - 70px)
+      @media (max-width: 1024px)
+        right: 15px
+  .collapse-item
+    @media (max-width: 1024px)
+      margin-bottom: 10px
+    &.active-item
+      @media (max-width: 1024px)
+        margin-bottom: 20px
+    .collapse-item
+      padding-left: 100px
+      @media (max-width: 1024px)
+        padding-left: 55px
+        //margin-bottom: 5px
+      @media (max-width: 480px)
+        padding-left: 30px
+      &:first-child
+        padding-top: 10px
+      &:last-child
+        margin-bottom: 0
+      .title-collapse-item
+        margin-bottom: 15px
+      h3, .h3
+        font-size: 24px
+        line-height: 36px
+        @media (max-width: 1024px)
+          font-size: 18px
+          line-height: 21px
+//faq-page-content end
+
+
+.contacts-page-content
+  .content
+    position: relative
+    width: auto
+    max-width: 470px
+    padding-bottom: 170px
+    @media (max-width: 1024px)
+      width: 100%
+      padding-bottom: 0
+      max-width: none
+    .title-section
+      right: auto
+      left: 0
+      top: 0
+      display: none
+      @media (max-width: 1024px)
+        display: block
+        right: 0
+        left: auto
+      @media (max-width: 600px)
+        margin-top: -25px
+      & *
+        @media (max-width: 1024px)
+          text-align: right
+      .text1
+        margin: -8px auto 0 58px
+        @media (max-width: 1024px)
+          margin: 0 0 0 auto
+      .text2
+        margin: -3px auto 0 0
+        @media (max-width: 1024px)
+          margin: 0 0 0 auto
+        @media (max-width: 600px)
+          margin-top: -5px
+    h1
+      margin-bottom: 35px
+      @media (max-width: 1024px)
+        margin-bottom: 20px
+  .contacts-section
+    position: relative
+    z-index: 20
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-flow: column nowrap
+    margin-bottom: 35px
+    @media (max-width: 600px)
+      margin-bottom: 0
+    .row
+      align-items: center
+      flex-wrap: wrap
+      margin-bottom: 20px
+      @media (max-width: 600px)
+        margin-bottom: 15px
+    .name, .follow-title
+      font-family: $accent-font
+      font-weight: 700
+      font-size: 21px
+      color: #000
+      margin-right: 5px
+      @media (max-width: 600px)
+        font-size: 20px
+    .desc
+      font-family: $main-font
+      font-size: 18px
+      font-weight: 400
+      color: #000
+    .name, .desc
+      @media (max-width: 600px)
+        margin-bottom: 10px
+    .follow-section
+      flex-flow: column nowrap
+      align-items: flex-start
+      .follow-title
+        margin-bottom: 15px
+      ul
+        margin-left: 0
+        margin-bottom: 0
+        li
+          &:before
+            display: none
+          &:first-child
+            padding-left: 0
+          & *
+            transition: ease-in-out 0.375s
+        svg
+          width: 20px!important
+          height: 20px!important
+        .st0
+          fill: #000!important
+          stroke: #000!important
+        a
+          &:hover
+            .st0
+              fill: $pink!important
+              stroke: $pink!important
+  //.map-wrapper
+  //  width: 670px
+  //  height: 520px
+  //  @extend .shadow_photo
+  //  @media (max-width: 1024px)
+  //    width: 100%
+  //    height: 305px
+  //    margin-bottom: 65px
+  //  @media (max-width: 600px)
+  //    margin-bottom: 25px
+//contact-form-colored-section
+
+.overflowDark
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(0, 0, 0, .8)
+  z-index: 1000
+  display: none
+  &.open
+    display: block
+
+//closeBtn
+.closeBtn
+  width: 32px
+  height: 32px
+  position: absolute
+  top: 30px
+  right: 30px
+  background: url("../images/close.svg") center no-repeat
+  background-size: contain
+  cursor: pointer
+  z-index: 2051
+  @media (max-width: 600px)
+    width: 23px
+    height: 23px
+    top: 25px
+//closeBtn end
+
+.contact-form-colored-section
+  background: $custom-color
+  @extend .shadow_color_box
+  width: 100%
+  max-width: 770px
+  position: relative
+  padding: 35px 47px
+  margin: 0 0 85px auto
+  //margin-top: -170px
+  @media (max-width: 1024px)
+    width: 100%
+    padding: 20px 15px 25px
+    margin-bottom: 65px
+  @media (max-width: 600px)
+    margin-bottom: 25px
+  &.popupFormSection
+    width: calc(100% - 60px)
+    display: none
+    position: fixed
+    top: 30px
+    left: 30px
+    z-index: 1050
+    padding: 35px 50px 40px
+    @media (max-width: 600px)
+      left: 20px
+      padding: 20px 15px 25px
+    &.open
+      display: block
+    form
+      input
+        margin-bottom: 40px
+  .colored-desc-title
+    margin-bottom: 40px
+    @media (max-width: 1024px)
+      margin-bottom: 25px
+  form
+    width: 100%
+    max-width: 100%
+    & *
+      width: 100%
+      max-width: 100%
+    label
+      font-family: $accent-font
+      color: $small-title-color-dark
+      font-size: 18px
+      font-weight: 700
+      margin-bottom: 10px
+      display: inline-block
+      @media (max-width: 1024px)
+        font-size: 16px
+        line-height: 21px
+    input, textarea
+      border: none
+      background: #4d5cb9
+      color: #ffffff
+      font-family: $accent-font
+      font-size: 16px
+      line-height: 21px
+      font-weight: 400
+      padding: 15px 25px
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+      @media (max-width: 1024px)
+        font-size: 14px
+        line-height: 18px
+      @media (max-width: 770px)
+        padding: 15px
+      &::placeholder
+        color: inherit
+        font-family: inherit
+        font-size: inherit
+        font-weight: inherit
+    input
+      margin-bottom: 30px
+      @media (max-width: 1024px)
+        margin-bottom: 25px
+    textarea
+      min-width: 100%
+      height: 140px
+      margin-bottom: 45px
+      @media (max-width: 1024px)
+        height: 105px
+        margin-bottom: 40px
+    input[type="submit"]
+      font-size: 14px
+      background: $pink
+      width: 170px
+      margin: 0 0 0 auto
+      cursor: pointer
+      @media (max-width: 1024px)
+        margin: 0 auto
+//contact-form-colored-section end
+
+
+//serviceSingle-page-content
+.serviceSingle-page-content
+  .wrapper
+    & > .title-section
+      .text1
+        @media (max-width: 1024px)
+          margin-top: 0
+//serviceSingle-page-content end
+
+
+//guaranteeSingle-page-content
+.guaranteeSingle-page-content
+  .content
+    @media (max-width: 1024px)
+      margin-bottom: 25px
+//guaranteeSingle-page-content end
+
+
+//order-page-content
+.order-page-content
+  h1
+    margin-bottom: 25px
+    @media (max-width: 1024px)
+      margin-bottom: 20px
+//order-page-content end
+
+
+//steps-items
+.steps-items
+  margin-bottom: 40px
+  @media (max-width: 1024px)
+    margin-bottom: 25px
+  ul
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+    margin-bottom: 0
+    li
+      position: relative
+      margin-right: 120px
+      padding: 30px 0 50px
+      @media (max-width: 1024px)
+        margin-right: 50px
+        padding: 20px 0 25px
+      &:before
+        display: none
+      &:after
+        content: ''
+        display: inline-block
+        width: 15px
+        height: 25px
+        background: url('../images/arrow_pink.svg') center no-repeat
+        background-size: contain
+        position: absolute
+        top: 34px
+        right: -60px
+        @media (max-width: 1024px)
+          right: -34px
+      &:last-child
+        margin-right: 0
+        &:after
+          display: none
+      &:first-child
+        .bg-counter-steps
+          .text
+            margin-left: -10px
+            @media (max-width: 1024px)
+              margin-left: -5px
+      &.active-item
+        a
+          color: $pink
+          text-decoration: underline
+      a
+        text-decoration: none
+        font-family: $main-font
+        font-size: 18px
+        font-weight: 700
+        color: #787878
+        position: relative
+        z-index: 5
+        &:hover
+          color: $pink
+          text-decoration: underline
+      .bg-counter-steps
+        position: absolute
+        top: 0
+        left: -3px
+        z-index: 1
+        display: flex
+        justify-content: flex-start
+        align-items: flex-end
+        .num, .text
+          font-family: $accent-font
+          line-height: 0.7
+          font-weight: 800
+          color: $title-color-light
+        .num
+          font-size: 140px
+          @media (max-width: 1024px)
+            font-size: 100px
+        .text
+          font-size: 50px
+          @media (max-width: 1024px)
+            font-size: 30px
+//steps-items end
+
+.custom-registration-title
+  font-family: $accent-font
+  font-weight: 300
+  font-size: 31px
+  color: $small-title-color-dark
+  padding-bottom: 10px
+  border-bottom: 1px solid $small-title-color-dark
+  display: block
+  width: 100%
+  margin-bottom: 55px
+  @media (max-width: 1024px)
+    font-size: 20px
+    margin-bottom: 40px
+
+.row-btns
+  width: 100%
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  @media (max-width: 1024px)
+    flex-direction: column-reverse
+  .btn-transp-withoutBorder
+    margin: auto 40px auto auto
+    @media (max-width: 1024px)
+      margin: 0 auto
+  input[type="submit"].pink-btn
+    margin: auto 0
+    @media (max-width: 1024px)
+      margin-bottom: 35px
+
+
+//registration-styles
+.registration-styles
+  padding-top: 75px
+  @media (max-width: 1024px)
+    padding-top: 35px
+  @media (max-width: 600px)
+    padding-top: 10px
+  .tabs-title
+    ul
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      li
+        font-family: $accent-font
+        font-size: 16px
+        color: #000
+        font-weight: 700
+        line-height: 21px
+        margin-right: 40px
+        padding: 0
+        position: relative
+        cursor: pointer
+        &:before
+          display: none
+        &:last-child
+          margin-right: 0
+        &:hover, &.active-item
+          color: $pink
+          &:after
+            content: ''
+            display: block
+            width: 100%
+            height: 0
+            border-bottom: 1px solid $pink
+            position: absolute
+            right: 0
+            bottom: -4px
+            left: 0
+  .calculator-section
+    width: 100%
+    padding: 0
+    box-shadow: none
+    background: transparent
+    margin: 0 0 70px
+    @media (max-width: 1024px)
+      margin-bottom: 55px
+    .type-task
+      @media (max-width: 600px)
+        margin-bottom: 40px
+    .col
+      position: relative
+    .row
+      position: relative
+      margin-bottom: 40px
+    .row1
+      margin-bottom: 20px
+      @media (max-width: 1024px)
+        margin-bottom: 40px
+    .title-row-form
+      font-family: $accent-font
+      font-size: 18px
+      line-height: 21px
+      font-weight: 700
+      color: #787878
+      margin-bottom: 7px
+      @media (max-width: 1024px)
+        font-size: 16px
+    .discipline-row
+      width: 100%
+      margin-bottom: 40px
+    .sub-desc
+      color: #787878
+      span
+        color: inherit
+    .time-line, .price-line
+      .runner-line
+        .title
+          color: #000
+    .select-section select, .select-section option, .counter, input, textarea
+      background: $title-color-light
+      color: #abaec6
+      &::placeholder
+        font-family: inherit
+        font-size: inherit
+        color: inherit
+        line-height: inherit
+    textarea
+      height: 270px
+      margin-bottom: 40px
+      @media (max-width: 1024px)
+        margin-bottom: 0
+    input[type="text"]
+      @media (max-width: 1024px)
+        height: 40px
+    .select-section
+      .select-btn
+        background: url('../images/arrow_abaec6.svg') center no-repeat
+        background-size: $bgSize_selectBtn
+    .counter
+      .down-btn, .up-btn
+        background: url('../images/arrow_abaec6.svg') center no-repeat
+        background-size: 10px 13px
+    .radioBtn-group
+      .title-row-form
+        margin-bottom: 20px
+        @media (max-width: 1024px)
+          margin-bottom: 15px
+      ul
+        li
+          label
+            color: #000
+            font-size: 16px
+          &:hover
+            label
+              color: $pink
+              border-bottom: 1px solid $pink
+    .runner-section
+      margin-bottom: 30px
+      @media (max-width: 1024px)
+        margin-bottom: 0
+    .error-mes
+      display: none
+      font-family: $accent-font
+      font-size: 12px
+      color: $pink
+      font-weight: 400
+      position: absolute
+      bottom: -17px
+    .error-item
+      input
+        background: #ffffff
+        border: 1px solid $pink
+      .error-mes
+        display: block
+//registration-styles end
+
+
+//orderRegistration-page-content
+.orderRegistration-page-content
+  .paper-details-section
+    overflow: hidden
+    padding: 45px 35px 0 45px
+    @media (max-width: 1024px)
+      padding: 30px 30px 30px 20px
+      display: flex
+      justify-content: flex-start
+      align-items: flex-start
+      flex-flow: column
+    .text1, .text2
+      font-size: 110px
+      @media (max-width: 1024px)
+        font-size: 80px
+    .text2
+      margin: -46px auto 0 17px
+      @media (max-width: 1024px)
+        margin-top: -32px
+  .title-section
+    order: 1
+  .paper-details-content
+    order: 2
+    .details-desc
+      width: 100%
+      .row
+        justify-content: flex-start
+        .name-details, .desc-details
+          width: 50%
+        .desc-details
+          text-align: left
+  .total-price
+    width: 100%
+    justify-content: flex-end
+    margin-bottom: 25px
+    position: relative
+    z-index: 5
+    order: 3
+    .title
+      font-family: $accent-font
+      font-size: 14px
+      line-height: 21px
+      font-weight: 700
+      color: $title-color-dark
+      white-space: nowrap
+      margin-right: 15px
+    .znak, .res
+      @media (max-width: 350px)
+        font-size: 28px
+        line-height: 28px
+  .paper-details-btns
+    order: 4
+    .btn-transp-withoutBorder
+      @media (max-width: 1024px)
+        margin-bottom: 0
+  .custom-registration-title
+    @media (max-width: 1024px)
+      margin-bottom: 25px
+  .calculator-section
+    @media (max-width: 1024px)
+      margin-bottom: 25px
+    .col
+      margin-bottom: 47px
+      @media (max-width: 1024px)
+        margin-bottom: 40px
+  .row-btns
+    padding-top: 20px
+  .confirmPassword
+    display: none
+//orderRegistration-page-content end
+
+//registration-page-content
+.registration-page-content
+  h1
+    margin-bottom: 35px
+  .sidebar
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-flow: column
+    .title-section
+      position: relative
+      margin-bottom: 10px
+      @media (max-width: 1024px)
+        margin: 0 auto 40px
+      & *
+        font-size: 93px
+        @media (max-width: 600px)
+          font-size: 60px
+      .text1
+        margin-top: 0
+      .text2
+        margin: -17px auto 0 75px
+        @media (max-width: 1024px)
+          margin-top: -10px
+      .text3
+        margin: -22px auto 0 15px
+        @media (max-width: 1024px)
+          margin-top: -13px
+    .btn-transparent
+      @media (max-width: 1024px)
+        margin: 0 auto 45px
+  .btn-transparent
+    margin: 0 0 auto auto
+  .calculator-section
+    margin-bottom: 25px
+    .col
+      margin-bottom: 47px
+      @media (max-width: 1024px)
+        margin-bottom: 40px
+  .row-btns
+    padding-top: 20px
+//registration-page-content end
+
+
+//orders-page-content
+.orders-page-content
+  padding-top: 75px
+  @media (max-width: 1024px)
+    padding-top: 55px
+  @media (max-width: 600px)
+    padding-top: 35px
+  h1, .h1
+    margin-bottom: 50px
+    @media (max-width: 1024px)
+      margin-bottom: 35px
+    @media (max-width: 600px)
+      margin-bottom: 25px
+
+//orders-section
+.orders-section
+  margin-bottom: 55px
+  @media (max-width: 600px)
+    margin-bottom: 0
+.rowTitle-ordersSection, .rowOrder
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 25px
+  .cell
+    width: 15%
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    &:first-child
+      @media (max-width: 1024px)
+        width: 22%
+      @media (max-width: 770px)
+        width: 25%
+      @media (max-width: 600px)
+        width: 120px
+        min-width: 120px
+      @media (max-width: 350px)
+        width: 110px
+        min-width: 110px
+    &.priceCell
+      width: 12%
+      @media (max-width: 1024px)
+        display: none
+    &.topicCell
+      width: 20%
+      @media (max-width: 1024px)
+        width: 51%
+      @media (max-width: 770px)
+        width: 48%
+      @media (max-width: 600px)
+        width: auto
+        margin: 0 auto 0 0
+        padding-right: 20px
+    &.statusCell
+      width: 18%
+      @media (max-width: 1280px)
+        width: 21%
+      @media (max-width: 1024px)
+        width: 27%
+      @media (max-width: 600px)
+        width: 18%
+    &.dateForm, &.dateTo
+      @media (max-width: 1024px)
+        display: none
+
+.rowTitle-ordersSection
+  background: $custom-color
+  .cell
+    padding: 15px 0 15px 25px
+    @media (max-width: 600px)
+      padding: 11px 0 11px 10px
+    &.topicCell
+      @media (max-width: 350px)
+        margin-left: -10px
+    &.statusCell
+      padding-right: 30px
+      @media (max-width: 770px)
+        position: relative
+  .cell, select
+    font-size: 18px
+    line-height: 1.3
+    font-weight: 700
+    font-family: $accent-font
+    color: $small-title-color-dark
+    @media (max-width: 600px)
+      font-weight: 600
+    @media (max-width: 400px)
+      font-size: 14px
+  .select-section
+    @media (max-width: 770px)
+      position: absolute
+      min-width: 145px
+      right: 10px
+      top: calc(50% - 17px)
+    @media (max-width: 400px)
+      min-width: 105px
+      right: 8px
+    select
+      background: $custom-color
+      padding: 5px 30px 5px 10px
+      @media (max-width: 600px)
+        text-align: right
+        direction: rtl
+      @media (max-width: 400px)
+        padding: 2px 20px 2px 5px
+      option
+        color: inherit
+        font-family: inherit
+        font-size: inherit
+        background: $custom-color
+    .select-btn
+      right: 0
+      bottom: calc(50% - 13px)
+      background: url("../images/arrow_8690ce.svg") center no-repeat
+      background-size: $bgSize_selectBtn
+      @media (max-width: 400px)
+        bottom: calc(50% - 7px)
+        width: 15px
+        height: 15px
+        background-size: 7px 10px
+
+.rowOrder
+  .cell
+    padding: 8px 0 8px 30px
+    min-height: 49px
+    font-size: 16px
+    line-height: 22px
+    font-family: $accent-font
+    font-weight: 400
+    color: #000
+    @media (max-width: 600px)
+      //max-height: 40px
+      //overflow: hidden
+      font-size: 14px
+      padding-left: 10px
+    @media (max-width: 350px)
+      font-size: 13px
+    &.moreDetailsBtn
+      background: $title-color-light
+      border-radius: 2px
+      padding: 18px 20px 18px 25px
+      color: #787878
+      height: 60px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      cursor: pointer
+      @media (max-width: 1280px)
+        padding-right: 15px
+        padding-left: 15px
+      @media (max-width: 600px)
+        height: 100%
+        max-height: 60px
+        padding-right: 10px
+        padding-left: 10px
+      .select-btn
+        position: relative
+        display: block
+        bottom: auto
+        right: auto
+        margin-left: 10px
+        background: url("../images/arrow_787878.svg") center no-repeat
+        background-size: $bgSize_selectBtn
+        @media (max-width: 350px)
+          width: 15px
+          height: 15px
+          background-size: 7px 10px
+          margin-left: 3px
+    span
+      font-size: inherit
+      color: inherit
+      font-family: inherit
+      font-weight: inherit
+    &.statusCell
+      text-transform: uppercase
+      @media (max-width: 600px)
+        justify-content: flex-end
+        max-width: 40px
+        padding-left: 0
+        padding-right: 20px
+  &.rowInProgress
+    .statusCell
+      color: #3f51b5
+  &.rowCanceled
+    .statusCell
+      color: #e24444
+  &.rowDone
+    .statusCell
+      color: #1d9c09
+//orders-section end
+
+
+//order-details-section
+.order-details-section
+  border: solid $title-color-light
+  justify-content: flex-start
+  align-items: flex-start
+  flex-flow: column
+  position: relative
+  margin: -25px 0 25px
+  overflow: hidden
+  width: 100%
+  height: 0
+  display: none
+  border-width: 0
+  &.openSection
+    height: auto
+    border-width: 10px
+    display: flex
+    @media (max-width: 600px)
+      border-width: 5px
+  .title-section
+    right: -18px
+    bottom: -29px
+    @media (max-width: 600px)
+      right: -10px
+      bottom: -17px
+.order-details-content, .oreder-details-btns
+  position: relative
+  z-index: 5
+.order-details-content
+  display: flex
+  justify-content: flex-start
+  align-items: stretch
+  margin-bottom: 40px
+  @media (max-width: 1024px)
+    flex-wrap: wrap
+    margin-bottom: 35px
+  .details-col
+    width: 31%
+    @media (max-width: 1024px)
+      width: 65%
+      margin-bottom: 15px
+    @media (max-width: 600px)
+      width: 100%
+      margin-bottom: 5px
+    .name-details
+      width: 115px
+      min-width: 115px
+      @media (max-width: 600px)
+        width: 135px
+        min-width: 135px
+      @media (max-width: 350px)
+        width: 100px
+        min-width: 100px
+  .timelines-col
+    width: 25%
+    @media (max-width: 1024px)
+      width: 35%
+      margin-bottom: 15px
+    @media (max-width: 600px)
+      width: 100%
+      margin-bottom: 5px
+    .name-details
+      width: 66px
+      min-width: 66px
+      @media (max-width: 600px)
+        width: 135px
+        min-width: 135px
+      @media (max-width: 350px)
+        width: 100px
+        min-width: 100px
+  .otherInfromation-col
+    width: 47%
+    @media (max-width: 1024px)
+      width: 100%
+    .details-desc
+      padding-right: 30px
+      height: 100%
+      .total-price-row
+        margin: auto 0 0 auto
+        @media (max-width: 1024px)
+          padding-top: 15px
+      .total-price
+        @media (max-width: 600px)
+          margin-bottom: 0
+    .name-details
+      width: 135px
+      min-width: 135px
+      @media (max-width: 350px)
+        width: 100px
+        min-width: 100px
+
+  .details-desc
+    padding: 15px 0 0 15px
+    @extend .col
+    @media (max-width: 1024px)
+      padding-right: 15px
+    .row
+      margin-bottom: 15px
+
+  .details-title
+    background: $title-color-light
+    width: 100%
+    padding: 15px
+    font-size: 18px
+    font-weight: 700
+    font-family: $accent-font
+    color: #787878
+  .name-details, .total-price .title
+    font-size: 14px
+    line-height: 22px
+    font-weight: 700
+    font-family: $accent-font
+    color: $custom-color
+    margin-right: 25px
+    @media (max-width: 600px)
+      margin-right: 20px
+    @media (max-width: 350px)
+      font-size: 13px
+  .desc-details
+    font-size: 14px
+    line-height: 22px
+    font-weight: 400
+    font-family: $accent-font
+    color: #000000
+    @media (max-width: 350px)
+      font-size: 13px
+  .instructionsRow
+    @media (max-width: 600px)
+      flex-flow: column
+    .name-details
+      @media (max-width: 600px)
+        margin-bottom: 6px
+.oreder-details-btns
+  width: 100%
+  display: flex
+  justify-content: flex-end
+  align-items: flex-start
+  @media (max-width: 600px)
+    flex-flow: column
+    justify-content: center
+    align-items: center
+  .btn-transp-withoutBorder
+    margin: 0 30px 30px 0
+    @media (max-width: 600px)
+      padding-bottom: 10px
+      margin-bottom: 20px
+    &:last-child
+      @media (max-width: 600px)
+        margin-bottom: 25px
+//order-details-section end
+
+//orders-page-content end
