@@ -1,12 +1,12 @@
 {
-  "name": "kyivproekt_development",
+  "name": "writingMetierXpage",
   "version": "1.0.0",
   "description": "work project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Andrii Tsvil",
+  "author": "Andrii Tsvil, Dmytro Tkach",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.24.4",

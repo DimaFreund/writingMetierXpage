@@ -51,6 +51,13 @@ html, body, main
 body
   &.not-scrolling
     overflow: hidden
+  &::-webkit-scrollbar-track
+    border-radius: 0px
+  &::-webkit-scrollbar
+    width: 4px
+  &::-webkit-scrollbar-thumb
+    border-radius: 0px
+    background: $pink
 
 .disable-hover, .disable-hover *
   pointer-events: none !important
@@ -219,7 +226,9 @@ header
   background: $custom-color
   padding: 35px 0 30px
   @extend .shadow_header
-  position: relative
+  position: fixed
+  top: 0
+  width: 100%
   z-index: 100
   @media (max-width: 1024px)
     height: 53px
@@ -403,6 +412,7 @@ header
 //main
 main
   padding-top: 40px
+  margin-top: 180px
   @media (max-width: 1024px)
     padding-top: 15px
 //main end
@@ -1552,7 +1562,7 @@ main
         @media (max-width: 1024px)
           background-size: 17px 17px
       h3, .h3
-        color: $pink
+        color: #000
     &>.content-collapse-item
       //display: flex
       opacity: 1
@@ -1565,6 +1575,11 @@ main
     cursor: pointer
     margin-bottom: 15px
     transition: 0.25s
+    h3
+      font-size: 31px
+      font-weight: 700
+      margin-bottom: 30px
+      font-family: $accent-font
     @media (max-width: 1024px)
       margin-bottom: 10px
     &:hover
@@ -1575,8 +1590,9 @@ main
         @media (max-width: 1024px)
           background-size: 17px 17px
       h3, .h3
-        color: $pink
+        color: #000
     .arrow
+      display: none
       width: 30px
       height: 28px
       background: url('../images/arrow_black.svg') center no-repeat
@@ -1598,8 +1614,8 @@ main
     justify-content: flex-start
     align-items: flex-start
     display: flex
-    opacity: 0
-    height: 0
+    opacity: 1
+    height: auto
     overflow: hidden
     transition: all ease 0.375s
   .collapse-item
@@ -3553,7 +3569,7 @@ footer
   transform-origin: center
   font-family: $accent-font
   font-size: 14px
-  left: 15px
+  left: 10px
   font-weight: 700
 .services_aside_link_green
   position: absolute
@@ -3563,5 +3579,246 @@ footer
   transform-origin: center
   font-family: $accent-font
   font-size: 14px
-  left: 15px
+  left: 10px
   font-weight: 700
+.our_benefits
+  border: 10px solid $title-color-light
+  overflow: hidden
+  margin-top: 60px
+  margin-bottom: 10px
+  position: relative
+  padding: 70px 35px 0
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  flex-flow: column wrap
+  @media (max-width: 1280px)
+    //margin-top: -50px
+  @media (max-width: 1024px)
+    margin-top: 0
+    margin-bottom: 65px
+    padding: 35px 40px 50px 40px
+  @media (max-width: 600px)
+    margin-bottom: 25px
+    padding: 30px 35px 30px 30px
+  .title-section
+    position: relative
+    margin-bottom: 35px
+    @media (max-width: 1024px)
+      margin: 0 auto 45px 0
+    @media (max-width: 600px)
+      margin: -37px auto 25px -22px
+    @media (min-width: 1025px)
+      position: absolute
+      top: 0
+      right: 0
+    .text2
+      font-size: 108px
+      margin: -35px -30px 0px 0px
+      @media (max-width: 1024px)
+        max-width: 433px
+        word-wrap: break-word
+        line-height: .8
+        margin-top: 0
+      @media (max-width: 600px)
+        max-width: 250px
+  .btn-transp-withoutBorder
+    margin: 0 0 60px auto
+    @media (max-width: 1024px)
+      margin: 0 auto
+.our_benefits_list
+  ul
+    li
+      font-size: 24px
+      font-weight: 600
+      font-family: $accent-font
+      padding-left: 30px
+.order_now_btn_bottom
+  background-color: $pink
+  margin-left: auto
+  margin-right: auto
+  display: block
+  margin-bottom: 20px
+  margin-top: 0px
+.content_section_item_pink_header
+  color: $pink
+.content_section_item
+  margin-bottom: 60px
+  h3
+    font-size: 31px
+    font-weight: 700
+    margin-bottom: 30px
+    font-family: $accent-font
+  p
+    font-size: 16px
+    font-weight: 400
+    font-family: $main-font
+.n_footer
+  width: 100%
+  height: auto
+.n_footer_part_3
+  background-color: $pink
+  padding-top: 15px
+  padding-bottom: 15px
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: center
+  div
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    p
+      margin-bottom: 0
+      margin-right: 15px
+      color: #fff
+      font-size: 12px
+      font-family: $accent-font
+      font-weight: 400
+.n_footer_part_2_menu_wrapper
+  width: 100%
+  background-color: #212c68
+  border-top: 2px solid #1f285b
+  padding-top: 15px
+  padding-bottom: 15px
+  box-shadow: 0 -6px 16px 0px rgba(0, 0, 0, 0.3)
+  ul
+    max-width: 1200px
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    li
+      margin-right: 60px
+      a
+        text-decoration: none
+        color: #fff
+        font-size: 18px
+        font-weight: 600
+        font-family: $accent-font
+.n_footer_part_2_content
+  background-color: #2a367c
+.n_footer_part_2_content_wrapper
+  max-width: 1200px
+  margin-left: auto
+  margin-right: auto
+  padding-top: 30px
+  padding-bottom: 30px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-start
+.n_footer_part_2_content_left
+  padding-right: 30px
+  width: calc(50% - 30px)
+  h4
+    font-weight: 700
+    font-size: 18px
+    font-family: $accent-font
+    color: #8690ce
+    margin-bottom: 15px
+  strong
+    font-size: 12px
+    font-weight: 400
+    font-family: $accent-font
+    color: #fff
+  p
+    font-size: 12px
+    font-weight: 400
+    font-family: $accent-font
+    color: #8690ce
+    margin-top: 15px
+    margin-bottom: 0
+  ul
+    li
+      font-size: 12px
+      line-height: 18px
+      font-weight: 400
+      font-family: $accent-font
+      color: #8690ce
+      padding-left: 25px
+      margin-bottom: 5px
+.n_footer_part_2_content_right
+  padding-right: 30px
+  width: calc(50% - 30px)
+  .n_footer_part_2_content_right_item
+    margin-bottom: 30px
+    h4
+      font-weight: 700
+      font-size: 18px
+      font-family: $accent-font
+      color: #8690ce
+      margin-bottom: 15px
+    p
+      font-size: 12px
+      font-weight: 400
+      line-height: 18px
+      font-family: $accent-font
+      color: #8690ce
+      margin-top: 15px
+      margin-bottom: 0
+      a
+        color: #00a0bd
+        font-size: 12px
+        font-weight: 400
+        line-height: 18px
+        font-family: $accent-font
+@media only screen and (max-width: 1280px)
+  .n_footer_part_2_menu_wrapper
+    ul
+      max-width: 90%
+      margin-left: auto
+      margin-right: auto
+  .n_footer_part_2_content_wrapper
+    max-width: 100%
+    padding-left: 15px
+    padding-right: 15px
+  .n_footer_part_2_content_left,.n_footer_part_2_content_right
+    padding-right: 0
+@media only screen and (max-width: 1024px)
+  .collapse-item
+    .title-collapse-item
+      .arrow
+        display: block
+  .collapse-item
+    .content-collapse-item
+      height: 0
+      opacity: 0
+  main
+    margin-top: 20px
+  .n_footer_part_2_menu_wrapper
+    ul
+      justify-content: flex-start
+      align-items: center
+      max-width: calc(100% - 15px)
+      padding-left: 15px
+      li
+        margin-right: 30px
+@media only screen and (max-width: 760px)
+  .n_footer_part_2_menu_wrapper
+    ul
+      justify-content: center
+      flex-wrap: wrap
+      padding-left: 0
+      li
+        margin: 10px 20px
+        a
+          font-size: 12px
+          font-weight: 400
+          font-family: $accent-font
+  .n_footer_part_2_content_wrapper
+    flex-wrap: wrap
+  .n_footer_part_2_content_left,.n_footer_part_2_content_right
+    width: 100%
+  .n_footer_part_2_content_right
+    margin-top: 20px
+  .n_footer_part_3
+    flex-wrap: wrap
+    padding-left: 5px
+    padding-right: 5px
+    div
+      p
+        line-height: 18px
+    a
+      margin-top: 10px
+    
