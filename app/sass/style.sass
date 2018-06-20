@@ -844,7 +844,7 @@ main
       margin-top: 0
 //colored-section-inf
 .colored-section-inf
-  width: 770px
+  width: 100%
   background: $custom-color
   position: relative
   z-index: 10
@@ -1085,20 +1085,20 @@ main
     margin-top: -85px
     @media (max-width: 1024px)
       margin-top: 0
-  .title-section
-    position: relative
-    margin: 120px auto auto -15px
-    z-index: 5
-    @media (max-width: 1024px)
-      display: none
-    .text2
-      width: 285px
-      line-height: 0.65
-      text-align: right
-      margin: -7px auto 0 35px
-      word-break: break-all
-      @media (max-width: 1280px)
-        width: 260px
+//  .title-section
+//    position: relative
+//    margin: 120px auto auto -15px
+//    z-index: 5
+//    @media (max-width: 1024px)
+//      display: none
+//    .text2
+//      width: 285px
+//      line-height: 0.65
+//      text-align: right
+//      margin: -7px auto 0 35px
+//      word-break: break-all
+//      @media (max-width: 1280px)
+//        width: 260px
 
 .calculator-section
   position: relative
@@ -1919,7 +1919,7 @@ footer
       padding-top: 30px
     @media (max-width: 600px)
       padding-top: 0
-    .custom-img-2
+    //.custom-img-2
       height: 380px
       margin-bottom: 60px
       @media (max-width: 1024px)
@@ -3491,3 +3491,77 @@ footer
 //order-details-section end
 
 //orders-page-content end
+
+.services_aside
+  border: 10px solid $title-color-light
+  margin-bottom: 60px
+.services_aside_header
+  background-color: $title-color-light
+  padding-top: 30px
+  padding-bottom: 30px
+  h4
+    margin: 0
+    font-family: $accent-font
+    color: #000
+    text-align: center
+    font-size: 24px
+    font-weight: 600
+.services_aside_link
+  background-color: #fff
+  position: relative
+  border-bottom: 2px solid $title-color-light
+  padding-top: 15px
+  padding-bottom: 15px
+  display: flex
+  justify-content: center
+  align-items: center
+  a
+    font-weight: 700
+    font-family: $accent-font
+    color: #000
+    font-size: 18px
+    position: relative
+    text-decoration: none
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+    &:after
+      content: ''
+      display: inline-block
+      width: 13px
+      height: 13px
+      top: 0.4em
+      margin-left: 10px
+      background: url('../images/arrow-play.svg') center no-repeat
+      background-size: contain
+      @media (max-width: 1024px)
+        width: 10px
+        height: 10px
+        right: -20px
+    &:hover
+      color: $pink
+      text-decoration: underline
+      &:after
+        background: url('../images/arrow-play-hover.svg') center no-repeat
+        background-size: contain
+.services_aside_link_red
+  position: absolute
+  text-transform: uppercase
+  color: #de0000
+  top: 50%
+  transform: translateY(-50%)
+  transform-origin: center
+  font-family: $accent-font
+  font-size: 14px
+  left: 15px
+  font-weight: 700
+.services_aside_link_green
+  position: absolute
+  color: #30941c
+  top: 50%
+  transform: translateY(-50%)
+  transform-origin: center
+  font-family: $accent-font
+  font-size: 14px
+  left: 15px
+  font-weight: 700
