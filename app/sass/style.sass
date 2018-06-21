@@ -3802,6 +3802,11 @@ footer
     font-size: 34px
     line-height: 39px
     font-weight: 500
+.n_footer_part_1_secondary
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-start
 .n_footer_part_1_secondary_col_1
   margin-top: 70px
   div
@@ -3828,6 +3833,11 @@ footer
       font-size: 14px
       margin: 12px 0 0 0
     dd
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      align-items: center
+      max-width: 145px
       a
         display: inline-block
         margin-right: 15px
@@ -3838,6 +3848,54 @@ footer
           svg
             path
               fill: #fff
+.n_footer_part_1_secondary_col_2
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+.n_footer_expand_list
+  margin-bottom: 15px
+  h4
+    color: #fff
+    text-transform: uppercase
+    font-family: $accent-font
+    font-size: 12px
+    font-weight: 500
+.n_footer_expand_list_item
+  a
+    text-decoration: none
+    color: #fff
+    font-family: $accent-font
+    font-size: 12px
+    &:hover
+      color: $pink
+.n_footer_expand_list_item_disabled
+  display: none
+.n_footer_expand_list_btn
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  margin-left: auto
+  margin-right: auto
+  outline: none
+  &:hover
+    cursor: pointer
+  b
+    font-family: $accent-font
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 700
+    color: $pink
+  span
+    border-left: 2px solid $pink
+    border-bottom: 2px solid $pink
+    width: 10px
+    height: 10px
+    display: block
+    transform: rotate(-45deg)
+.n_footer_expand_list_btn_disabled
+  display: none
 ////////////////////////////////////////////////////////////////////
 ////////////////MEDIA QUERIES///////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
