@@ -4024,6 +4024,55 @@ footer
     .n_content-collapse-item_active
       height: auto
       opacity: 1
+.reg_form
+  max-width: 680px
+  padding-left: 5px
+  padding-right: 5px
+  margin-bottom: 60px
+  button
+    margin-right: 0
+    margin-left: auto
+    width: 105px
+    &:disabled
+      &:hover
+        cursor: not-allowed
+.reg_form_block
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  margin-bottom: 25px
+  label
+    font-family: $accent-font
+    font-size: 18px
+    font-weight: 700
+    color: #787878
+    margin-bottom: 15px
+  input
+    outline: none
+    background-color: #e7e9f6
+    border-radius: 5px
+    border: 1px solid transparent
+    font-family: 'Noto Sans', sans-serif
+    color: #abaec6
+    font-size: 16px
+    font-weight: 400
+    padding: 15px 20px
+    width: 100%
+    &:focus
+      border-color: #e7e9f6
+      background-color: #fff
+  span
+    margin-top: 10px
+    color: $pink
+    font-size: 12px
+    font-family: 'Noto Sans', sans-serif
+    opacity: 0
+.reg_form_error_email
+  opacity: 1!important
+.reg_form_error_for_input
+  border-color: $pink!important
 ////////////////////////////////////////////////////////////////////
 ////////////////MEDIA QUERIES///////////////////////////////////////
 ////////////////////////////////////////////////////////////////////

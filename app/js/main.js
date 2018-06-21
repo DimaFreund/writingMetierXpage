@@ -534,10 +534,31 @@ $(this).parent('.n_footer_expand_list').siblings('.n_footer_expand_list').find('
 //  });
   $('.n_title-collapse-item').click(function(){
     $(this).siblings('.n_content-collapse-item').toggleClass('n_content-collapse-item_active');
-    $(this).toggleClass('n_title-collapse-item_active')
+    $(this).toggleClass('n_title-collapse-item_active');
   });
-  
-  
+  function validateRegForm(){
+    var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
+    var mail = $('#registration_form_email');
+    var errorSpan = $('.reg_form_block span');
+    mail.on('change',function(){
+    if(mail.val() != ''){
+      if(mail.val().search(pattern) == 0){
+        errorSpan.removeClass('reg_form_error_email');
+        $('.reg_form button').attr('disabled', false);
+        mail.removeClass('reg_form_error_for_input');
+      }else{
+        errorSpan.addClass('reg_form_error_email');
+        $('.reg_form button').attr('disabled', true);
+        mail.addClass('reg_form_error_for_input');
+      }
+    }else{
+      errorSpan.addClass('reg_form_error_email');
+      $('.reg_form button').attr('disabled', true);
+      mail.addClass('reg_form_error_for_input');
+    }
+    });
+  }
+  validateRegForm();
 });
 
 

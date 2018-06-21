@@ -7793,6 +7793,88 @@ footer .enter-your-email .link-to-sing-up {
   opacity: 1;
 }
 
+.reg_form {
+  max-width: 680px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 60px;
+}
+
+.reg_form button {
+  margin-right: 0;
+  margin-left: auto;
+  width: 105px;
+}
+
+.reg_form button:disabled:hover {
+  cursor: not-allowed;
+}
+
+.reg_form_block {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.reg_form_block label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #787878;
+  margin-bottom: 15px;
+}
+
+.reg_form_block input {
+  outline: none;
+  background-color: #e7e9f6;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid transparent;
+  font-family: 'Noto Sans', sans-serif;
+  color: #abaec6;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.reg_form_block input:focus {
+  border-color: #e7e9f6;
+  background-color: #fff;
+}
+
+.reg_form_block span {
+  margin-top: 10px;
+  color: #f83d70;
+  font-size: 12px;
+  font-family: 'Noto Sans', sans-serif;
+  opacity: 0;
+}
+
+.reg_form_error_email {
+  opacity: 1 !important;
+}
+
+.reg_form_error_for_input {
+  border-color: #f83d70 !important;
+}
+
 @media only screen and (max-width: 1280px) {
   .n_footer_part_2_menu_wrapper ul {
     max-width: 90%;
