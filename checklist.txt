@@ -1,2 +1,9 @@
-1. services.html_________DONE
-2. footer block
+1. services.html  _________DONE
+2. footer block  __________DONE
+3. service-single.html ____DONE
+
+
+/////////////////////////////////
+add libraries:
+- jQuery 3.3.1
+- js/pdfobject.min.js
