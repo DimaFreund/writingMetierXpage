@@ -270,6 +270,7 @@ $( document ).ready(function(){
     }
 
     catalogItemCounter('.fieldCount');
+    catalogItemCounter('.fieldCountSources');
     //counter calculator end
 
 

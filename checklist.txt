@@ -2,10 +2,11 @@
 2. footer block  __________DONE
 3. service-single.html ____DONE
 4. registration.html ______DONE
+5. order_step_1 ___________
 
 
 /////////////////////////////////
-add libraries:
+add libraries (before body end):
 - jQuery 3.3.1
 - js/pdfobject.min.js
 
