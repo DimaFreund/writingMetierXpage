@@ -2073,6 +2073,7 @@ footer
   // sidebar end
   .btn-transp-withoutBorder
     margin: 0 0 50px auto
+    float: right
     @media (max-width: 1024px)
       margin: 0 auto
   figure
@@ -3015,7 +3016,7 @@ footer
         margin-bottom: 0
     input[type="text"]
       @media (max-width: 1024px)
-        height: 40px
+        //height: 40px
     .select-section
       .select-btn
         background: url('../images/arrow_abaec6.svg') center no-repeat
@@ -3063,9 +3064,9 @@ footer
 .orderRegistration-page-content
   .paper-details-section
     overflow: hidden
-    padding: 45px 35px 0 45px
+    padding: 0
     @media (max-width: 1024px)
-      padding: 30px 30px 30px 20px
+      padding: 0
       display: flex
       justify-content: flex-start
       align-items: flex-start
@@ -3082,30 +3083,51 @@ footer
     order: 1
   .paper-details-content
     order: 2
+    padding: 25px 35px 0 45px
     .details-desc
       width: 100%
+      h3
+        font-size: 24px
+        font-family: $accent-font
+        font-weight: 700
+        margin-bottom: 25px
       .row
         justify-content: flex-start
         .name-details, .desc-details
           width: 50%
         .desc-details
-          text-align: left
+          text-align: right
+          font-family: 'Noto Sans', sans-serif
+          font-weight: 700
+          font-size: 18px
+        .name-details
+          font-family: $accent-font
+          font-size: 18px
+          font-weight: 700
+          color: #787878
   .total-price
     width: 100%
-    justify-content: flex-end
-    margin-bottom: 25px
+    justify-content: center
+    background-color: #3f51b5
+    margin-bottom: 0px
     position: relative
     z-index: 5
     order: 3
+    padding-top: 15px
+    padding-bottom: 15px
     .title
       font-family: $accent-font
-      font-size: 14px
+      font-size: 18px
       line-height: 21px
       font-weight: 700
-      color: $title-color-dark
+      color: #fff
       white-space: nowrap
       margin-right: 15px
     .znak, .res
+      font-weight: 400
+      font-size: 30px
+      color: #fff
+      font-family: $accent-font
       @media (max-width: 350px)
         font-size: 28px
         line-height: 28px
@@ -4438,6 +4460,75 @@ select,button,input,textarea
     font-weight: 800
     line-height: 67px
     color: #e7e9f6
+.animated_label
+  transform: translate3d(25px,42px,0px)
+  transition: all 0.3s ease
+  z-index: 2
+.animated_label_active
+  transform: translate3d(0px,0px,0px)
+  transition: all 0.3s ease
+.animated_input
+  position: relative
+  z-index: 1
+  background-color: transparent
+.registration-styles
+  .calculator-section
+    .animated_label
+      font-family: 'Noto Sans', sans-serif
+      font-size: 16px
+      font-weight: 400
+      color: #abaec6
+      transform: translate3d(25px,42px,0px)
+      transition: all 0.3s ease
+    .animated_label_active
+      font-family: $accent-font
+      font-size: 18px
+      font-weight: 700
+      color: #787878
+      transform: translate3d(0px,0px,0px)
+      transition: all 0.3s ease
+.forgot_pass_link
+  font-family: 'Noto Sans', sans-serif
+  font-size: 16px
+  font-weight: 400
+  color: #292fa1
+  margin-top: -25px
+.form_succeed
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: 40px
+  margin-top: 20px
+  padding-top: 0px
+  img
+    margin-bottom: -75px
+  p
+    text-align: center
+    margin-bottom: 0
+    font-family: $accent-font
+    font-size: 24px
+    font-weight: 400
+    b
+      font-weight: 700
+      font-family: $accent-font
+      font-size: 24px
+  a
+    text-decoration: none
+    text-transform: uppercase
+    color: #fff
+    background-color: #30941c
+    font-weight: 700
+    font-family: $accent-font
+    font-size: 14px
+    display: block
+    padding: 18px 32px
+    margin-top: 40px
+    box-shadow: 0 0 5px rgba(0,0,0,0.5)
+    border-radius: 25px
+    &:active
+      box-shadow: 0 0 5px rgba(0,0,0,0.0)
+    &:hover
+      box-shadow: 0 0 5px rgba(0,0,0,0.0)
 ////////////////////////////////////////////////////////////////////
 ////////////////MEDIA QUERIES///////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
@@ -4599,6 +4690,24 @@ select,button,input,textarea
   .n_collapse_bg_text
     span
       font-size: 72px
+@media only screen and (max-width: 620px)
+  .animated_label
+    transform: translate3d(25px, 33px, 0px)
+  .registration-styles
+    .calculator-section
+      .animated_label
+        width: auto
+        transform: translate3d(25px, 33px, 0px)
+      .animated_label_active
+        transform: translate3d(0px, 0px, 0px)
+  .orderRegistration-page-content
+    .paper-details-content
+      padding: 20px 10px 0 10px
+  .single-article
+    .btn-transp-withoutBorder
+      margin-bottom: 20px
+//  .animated_label
+//    transform: translate3d(25px, 33px, 0px)!important
 @media only screen and (max-width: 480px)
   .registration-styles
     .calculator-section
@@ -4642,5 +4751,4 @@ select,button,input,textarea
     label
       i
         width: 30px
-  .calculator-section 
   

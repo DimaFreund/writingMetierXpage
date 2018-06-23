@@ -560,6 +560,16 @@ $(this).parent('.n_footer_expand_list').siblings('.n_footer_expand_list').find('
     });
   }
   validateRegForm();
+  $('.col input').focusin(function(){
+    $(this).siblings('.animated_label').addClass('animated_label_active');
+  });
+   $('.col input').focusout(function(){
+     if($(this).val() == ''){
+      $(this).siblings('.animated_label').removeClass('animated_label_active');
+     }else{
+      $(this).siblings('.animated_label').addClass('animated_label_active');
+    }
+   });
 });
 
 

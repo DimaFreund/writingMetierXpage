@@ -2,7 +2,11 @@
 2. footer block  __________DONE
 3. service-single.html ____DONE
 4. registration.html ______DONE
-5. order_step_1 ___________
+5. order_step_1 ___________DONE
+6. order_step_2_new _______DONE
+7. order_step_2_new_pay ___DONE
+8. order_step_2_old________DONE
+9. order_step_2_old_pay____DONE
 
 
 /////////////////////////////////
