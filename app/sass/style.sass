@@ -3221,10 +3221,13 @@ footer
   align-items: center
   margin-bottom: 25px
   .cell
-    width: 15%
+    width: auto//15%
     display: flex
     justify-content: flex-start
     align-items: center
+    font-weight: 400
+    font-size: 16px
+    font-family: $accent-font
     &:first-child
       @media (max-width: 1024px)
         width: 22%
@@ -3265,7 +3268,7 @@ footer
 .rowTitle-ordersSection
   background: $custom-color
   .cell
-    padding: 15px 0 15px 25px
+    padding: 15px 0px 15px 30px
     @media (max-width: 600px)
       padding: 11px 0 11px 10px
     &.topicCell
@@ -3321,7 +3324,7 @@ footer
 .rowOrder
   .cell
     padding: 8px 0 8px 30px
-    min-height: 49px
+    //min-height: 49px
     font-size: 16px
     line-height: 22px
     font-family: $accent-font
@@ -3337,9 +3340,10 @@ footer
     &.moreDetailsBtn
       background: $title-color-light
       border-radius: 2px
-      padding: 18px 20px 18px 25px
+      padding: 10px 20px 10px 20px
       color: #787878
-      height: 60px
+      text-decoration: none
+      //height: 60px
       display: flex
       justify-content: space-between
       align-items: center
@@ -3379,13 +3383,16 @@ footer
         padding-right: 20px
   &.rowInProgress
     .statusCell
+      font-weight: 700
       color: #3f51b5
   &.rowCanceled
     .statusCell
-      color: #e24444
+      color: $pink
+      font-weight: 700
   &.rowDone
     .statusCell
       color: #1d9c09
+      font-weight: 700
 //orders-section end
 
 
@@ -4529,6 +4536,155 @@ select,button,input,textarea
       box-shadow: 0 0 5px rgba(0,0,0,0.0)
     &:hover
       box-shadow: 0 0 5px rgba(0,0,0,0.0)
+.orders_switch
+  width: auto
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+.orders_switch_btn
+  margin-right: 5px
+  margin-bottom: 5px
+  color: #787878
+  text-transform: uppercase
+  text-align: center
+  font-family: 'Noto Sans', sans-serif
+  font-size: 18px
+  font-weight: 400
+  background-color: #e7e9f6
+  border-radius: 3px
+  width: 155px
+  height: 50px
+.orders_switch_btn_active
+  color: $pink
+.header_bonus_above
+  top: 60px
+.header_bonus
+  background-color: #00c15e
+  width: 100%
+  height: 60px
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 100
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  p
+    font-family: $accent-font
+    font-weight: 400
+    color: #fff
+    font-size: 20px
+    text-align: center
+    margin-bottom: 0
+    span
+      border: 3px solid #fff
+      padding-left: 10px
+      padding-right: 10px
+      padding-top: 3px
+      padding-bottom: 3px
+      font: inherit
+.header_bonus_close
+  position: absolute
+  right: 20px
+  top: 50%
+  transform: translateY(-50%)
+  transform-origin: center
+  display: block
+  span
+    width: 40px
+    height: 3px
+    background-color: #fff
+    position: relative
+    display: block
+    transform-origin: right
+    &:nth-child(1)
+      transform: rotateZ(-35deg)
+      margin-bottom: 20px
+    &:nth-child(2)
+      transform: rotateZ(35deg)
+.header_bonus_disabled
+  display: none
+.aside_subscribe
+  background-color: #3f51b5
+  padding: 30px
+  margin-bottom: 50px
+  margin-top: 40px
+  box-shadow: 0 0 5px rgba(0,0,0,0.6)
+  h3
+    text-align: center
+    color: #fff
+    font-family: $accent-font
+    font-size: 26px
+    font-weight: 400
+  p
+    text-align: center
+    color: #fff
+    font-family: $main-font!important
+    font-size: 18px
+    font-weight: 400
+  hr
+    margin-bottom: 10px!important
+  form
+    label
+      display: block
+      margin-bottom: 15px
+      font-size: 18px
+      font-weight: 700
+      color: #8690ce
+      font-family: $accent-font
+    input
+      display: block
+      padding: 20px 5px 20px 25px
+      width: 100%
+      border-radius: 5px
+      background-color: #4d5cb9
+      border: none
+      font-family: 'Noto Sans', sans-serif
+      font-size: 16px
+      color: #fff
+      font-weight: 400
+      &::placeholder
+        color: #fff
+    button
+      display: block
+      margin-left: auto
+      margin-right: auto
+      margin-top: 20px
+.super_bottom_order
+  background-color: $pink
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  padding-top: 30px
+  padding-bottom: 30px
+  p
+    color: #fff
+    text-align: center
+    font-family: $accent-font
+    font-size: 24px
+    font-weight: 600
+  a
+    text-transform: uppercase
+    color: #fff
+    background-color: #3f51b5
+    text-decoration: none
+    font-family: $accent-font
+    font-size: 14px
+    font-weight: 700
+    padding: 16px 32px
+    box-shadow: 0 0 6px rgba(0,0,0,0.6)
+    border-radius: 25px
+    &:hover,&:active
+      background-color: #3949a2
+      box-shadow: none
+.sample_paper_details
+  border: 10px solid #e7e9f6
+  width: 100%
+  padding: 35px
 ////////////////////////////////////////////////////////////////////
 ////////////////MEDIA QUERIES///////////////////////////////////////
 ////////////////////////////////////////////////////////////////////

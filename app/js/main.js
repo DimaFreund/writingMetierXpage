@@ -311,9 +311,9 @@ $( document ).ready(function(){
         }
         else {
             allVariants.innerHTML = 'Status';
-            removeImg(inProgressElem, 'in progress');
-            removeImg(canceledElem, 'CANCELED');
-            removeImg(doneElem, 'DONE');
+            removeImg(inProgressElem, 'active');
+            removeImg(canceledElem, 'unpaid');
+            removeImg(doneElem, 'completed');
         }
     }
 
@@ -570,6 +570,14 @@ $(this).parent('.n_footer_expand_list').siblings('.n_footer_expand_list').find('
       $(this).siblings('.animated_label').addClass('animated_label_active');
     }
    });
+  $('.orders_switch_btn').click(function(){
+    $(this).addClass('orders_switch_btn_active');
+    $(this).siblings().removeClass('orders_switch_btn_active');
+  });
+  $('.header_bonus_close').click(function(){
+    $('header').removeClass('header_bonus_above');
+    $('.header_bonus').addClass('header_bonus_disabled')
+  });
 });
 
 
