@@ -466,13 +466,8 @@ $( document ).ready(function(){
     //scrolling window
     window.addEventListener('scroll', function(e){
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-
-
         //scroll animate elements
-
         //scroll animate elements end
-
-
         // show/hide btn-to-top
         if(scrolled > height_window){
             btnToTop.classList.add('active-item');
@@ -584,15 +579,13 @@ $(this).parent('.n_footer_expand_list').siblings('.n_footer_expand_list').find('
   });
   $('.cwb_wrapper .btn-transp-withoutBorder').click(function(){
     $(this).siblings('.cwb_uploaded_files').toggleClass('cwb_uploaded_files_active');
-    $('.cwb_wrapper .btn-transp-withoutBorder').text(function(i, v){
+
+  });
+  $('.hideMoreFiles').click(function(){
+    $(this).text(function(i, v){
        return v === 'Show more files' ? 'hide' : 'Show more files';
     })
   });
-  
-  
-  
-  
-  
    	var time = 7200000;
    	function getTime(time){
         //var four_hours = 14400000; // 4 часа

@@ -4976,6 +4976,108 @@ select,button,input,textarea
   padding: 12px 16px
   border-radius: 5px
   width: 70px
+.invoice_block
+  border: 10px solid #e7e9f6
+  margin-bottom: 30px
+  margin-top: 5px
+.invoice_block_header
+  background: #e7e9f6
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  align-items: center
+  padding: 2px 0 10px 5px
+  a
+    text-decoration: none
+    text-transform: uppercase
+    color: #fff
+    background-color: $pink
+    border-radius: 3px
+    margin-left: 10px
+    display: block
+    font-family: $accent-font
+    font-weight: 700
+    font-size: 14px
+    box-shadow: 0 0 5px rgba(0,0,0,0.5)
+    padding: 19px 13px
+    text-align: center
+    &:hover
+      box-shadow: none
+.invoice_block_wrapper
+  padding: 25px 30px
+  h2
+    font-family: $accent-font
+    font-size: 40px
+    font-weight: 700
+.invoice_block_wrapper_adr
+  address
+    font-family: $accent-font
+    font-size: 24px
+    font-weight: 700
+    text-align: right
+    font-style: normal
+    color: #787878
+    margin-bottom: 10px
+.invoice_block_personal_info
+  margin-bottom: 40px
+  b
+    font-size: 18px
+    font-family: $accent-font
+    font-weight: 700
+    color: #787878
+    margin-bottom: 20px
+    display: block
+  p
+    font-family: 'Noto Sans', sans-serif
+    font-weight: 400
+    font-size: 18px
+    margin-bottom: 0
+.invoice_order_details_item
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  margin-bottom: 15px
+  margin-top: 15px
+  b
+    font-family: $accent-font
+    font-size: 18px
+    font-weight: 700
+    color: #787878
+    margin-right: 5px
+  pre
+    font-family: $accent-font
+    font-size: 18px
+    font-weight: 700
+    color: #000
+.invoice_total_price
+  background-color: #3f51b5
+  text-align: center
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  padding-top: 20px
+  padding-bottom: 20px
+  span
+    font-size: 30px
+    color: #fff
+    font-family: $accent-font
+    font-weight: 400
+  b
+    font-weight: 700
+    font-size: 18px
+    color: #fff
+    font-family: $accent-font
+    margin-right: 10px
+    margin-bottom: -10px
+.invoce_bootom_text
+  max-width: 515px
+  margin-bottom: 80px
+  p
+    font-family: 'Noto Sans', sans-serif
+    font-weight: 400
+    font-size: 18px
 ////////////////////////////////////////////////////////////////////
 ////////////////MEDIA QUERIES///////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
@@ -5270,3 +5372,43 @@ select,button,input,textarea
         font-size: 14px
       a
         font-size: 14px
+  .c_order_timer
+    padding: 15px 10px 5px 10px
+  .timer_numbers
+    font-size: 20px
+    width: 54px
+  .c_order_timer_block
+    width: 210px
+  .invoice_block_wrapper
+    padding: 15px 10px
+  .invoice_block_header
+    a
+      font-size: 12px
+      padding: 0 5px
+      height: 50px
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+  .invoice_block_wrapper_adr
+    margin-bottom: 30px
+  .invoice_block_personal_info
+    b
+      margin-bottom: 10px
+    p
+      font-size: 14px
+  .invoice_block_wrapper_adr
+    address
+      font-size: 16px
+  .invoice_order_details_item
+    b,pre
+      font-size: 14px
+  .invoice_block_wrapper
+    h2
+      font-size: 26px
+  .invoice_total_price
+    b
+      font-size: 16px
+      margin-bottom: 0
+    span
+      font-size: 20px

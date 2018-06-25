@@ -9485,6 +9485,185 @@ select, button, input, textarea {
   width: 70px;
 }
 
+.invoice_block {
+  border: 10px solid #e7e9f6;
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+
+.invoice_block_header {
+  background: #e7e9f6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px 0 10px 5px;
+}
+
+.invoice_block_header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #f83d70;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  margin-left: 10px;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 19px 13px;
+  text-align: center;
+}
+
+.invoice_block_header a:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.invoice_block_wrapper {
+  padding: 25px 30px;
+}
+
+.invoice_block_wrapper h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.invoice_block_wrapper_adr address {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  font-style: normal;
+  color: #787878;
+  margin-bottom: 10px;
+}
+
+.invoice_block_personal_info {
+  margin-bottom: 40px;
+}
+
+.invoice_block_personal_info b {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #787878;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.invoice_block_personal_info p {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.invoice_order_details_item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.invoice_order_details_item b {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #787878;
+  margin-right: 5px;
+}
+
+.invoice_order_details_item pre {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.invoice_total_price {
+  background-color: #3f51b5;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.invoice_total_price span {
+  font-size: 30px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.invoice_total_price b {
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  margin-right: 10px;
+  margin-bottom: -10px;
+}
+
+.invoce_bootom_text {
+  max-width: 515px;
+  margin-bottom: 80px;
+}
+
+.invoce_bootom_text p {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
 @media only screen and (max-width: 1280px) {
   .n_footer_part_2_menu_wrapper ul {
     max-width: 90%;
@@ -9927,5 +10106,65 @@ select, button, input, textarea {
   }
   .download_files div a {
     font-size: 14px;
+  }
+  .c_order_timer {
+    padding: 15px 10px 5px 10px;
+  }
+  .timer_numbers {
+    font-size: 20px;
+    width: 54px;
+  }
+  .c_order_timer_block {
+    width: 210px;
+  }
+  .invoice_block_wrapper {
+    padding: 15px 10px;
+  }
+  .invoice_block_header a {
+    font-size: 12px;
+    padding: 0 5px;
+    height: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .invoice_block_wrapper_adr {
+    margin-bottom: 30px;
+  }
+  .invoice_block_personal_info b {
+    margin-bottom: 10px;
+  }
+  .invoice_block_personal_info p {
+    font-size: 14px;
+  }
+  .invoice_block_wrapper_adr address {
+    font-size: 16px;
+  }
+  .invoice_order_details_item b, .invoice_order_details_item pre {
+    font-size: 14px;
+  }
+  .invoice_block_wrapper h2 {
+    font-size: 26px;
+  }
+  .invoice_total_price b {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .invoice_total_price span {
+    font-size: 20px;
   }
 }
