@@ -8,6 +8,7 @@
 8. order_step_2_old _______________DONE
 9. order_step_2_old_pay ___________DONE
 10. cabinet_unpaid(orders.html) ___DONE
+11. service-single-2.html _________DONE
 
 
 /////////////////////////////////
@@ -16,5 +17,5 @@ add libraries (before <body> end):
 - js/pdfobject.min.js
 
 fonts in <head> :
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Noto+Serif|Noto+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Noto+Serif|Noto+Sans:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">

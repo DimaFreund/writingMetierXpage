@@ -578,6 +578,58 @@ $(this).parent('.n_footer_expand_list').siblings('.n_footer_expand_list').find('
     $('header').removeClass('header_bonus_above');
     $('.header_bonus').addClass('header_bonus_disabled')
   });
+  $('.c_order_topic .btn-transp-withoutBorder').click(function(){
+    $(this).siblings('.c_order_topic_wrapper').addClass('c_order_topic_wrapper_full');
+    $(this).css({'display':"none"});
+  });
+  $('.cwb_wrapper .btn-transp-withoutBorder').click(function(){
+    $(this).siblings('.cwb_uploaded_files').toggleClass('cwb_uploaded_files_active');
+    $('.cwb_wrapper .btn-transp-withoutBorder').text(function(i, v){
+       return v === 'Show more files' ? 'hide' : 'Show more files';
+    })
+  });
+  
+  
+  
+  
+  
+   	var time = 7200000;
+   	function getTime(time){
+        //var four_hours = 14400000; // 4 часа
+//        if (time == 0) {
+//           document.getElementById("countdown_timer_text_11629").style.opacity = "0";
+//        };
+        var countDownDate = new Date().getTime() + time;// нынешнее время + 4 часа
+        var my_interval = setInterval(Clock,1000);// запускаем таймер
+        function Clock(){
+          var now = new Date().getTime();// нынешнее время
+          var distance = countDownDate - now;//
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));//
+          if (hours < 10) {
+            hours = '0'+ hours;
+          };
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));//
+          if (minutes < 10) {
+            minutes = '0'+ minutes;
+          };
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);//
+          if (seconds < 10) {
+            seconds = '0'+ seconds;
+          };
+          document.getElementById("timer_hours").innerHTML = hours ;//
+          document.getElementById("timer_minutes").innerHTML = minutes ;
+          document.getElementById("timer_seconds").innerHTML = seconds ;
+//          if (distance < 3000) {
+//            countDownDate = new Date().getTime() + four_hours_11629;//обновляем переменную даты
+//          };
+        } 
+   	}
+   	getTime(time);
+   
+  
+  
+  
+  
 });
 
 
