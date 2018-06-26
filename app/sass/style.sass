@@ -4135,12 +4135,18 @@ select,button,input,textarea
       .counter_box_left
         display: flex
         flex-direction: column
+        label
+          line-height: 16px
+          margin-bottom: 11px
         .counter
           width: 120px
+          margin-bottom: 0
       .sub-desc
         margin-left: -20px
         height: 30px
-        margin-bottom: 18px
+        margin-top: 15px
+        margin-bottom: 0px
+        display: block
     .pages_settings_select
       max-width: 100%
       select
@@ -4969,13 +4975,19 @@ select,button,input,textarea
     color: #abaec6
     text-transform: lowercase
 .timer_numbers
-  background-color: #e7e9f6
+  //background-color: #e7e9f6
   font-family: $accent-font
   font-size: 30px
+  justify-content: space-around
+  letter-spacing: 25px
   font-weight: 500
-  padding: 12px 16px
+  padding: 5px 0 5px 10px
   border-radius: 5px
-  width: 70px
+  width: 80px
+  background-image: url('../images/timer_bg.png')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: contain
 .invoice_block
   border: 10px solid #e7e9f6
   margin-bottom: 30px
@@ -5288,6 +5300,11 @@ select,button,input,textarea
   .single-article
     .btn-transp-withoutBorder
       margin-bottom: 20px
+  .discount_input_block
+    input
+      padding: 11px 5px 11px 5px
+    button
+      padding: 12.5px 40px
 //  .animated_label
 //    transform: translate3d(25px, 33px, 0px)!important
 @media only screen and (max-width: 480px)
@@ -5309,13 +5326,13 @@ select,button,input,textarea
       max-width: 100%
       margin-bottom: 10px
     .pages_settings_box
-      align-items: flex-end
+      //align-items: flex-end
       .pages_spacing
         margin-left: 20px
         .spacing-desc
           margin-top: 5px
         label
-          margin-bottom: 7px
+          margin-bottom: 11px
       .counter-box
         .sub-desc
           margin-bottom: 0
@@ -5377,6 +5394,7 @@ select,button,input,textarea
   .timer_numbers
     font-size: 20px
     width: 54px
+    letter-spacing: 14px
   .c_order_timer_block
     width: 210px
   .invoice_block_wrapper
