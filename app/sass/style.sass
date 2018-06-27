@@ -4975,19 +4975,19 @@ select,button,input,textarea
     color: #abaec6
     text-transform: lowercase
 .timer_numbers
-  //background-color: #e7e9f6
+  background-color: #e7e9f6
   font-family: $accent-font
   font-size: 30px
   justify-content: space-around
-  letter-spacing: 25px
+  //letter-spacing: 25px
   font-weight: 500
-  padding: 5px 0 5px 10px
+  padding: 13px 18px
   border-radius: 5px
-  width: 80px
-  background-image: url('../images/timer_bg.png')
-  background-repeat: no-repeat
-  background-position: center center
-  background-size: contain
+  width: 70px
+  //background-image: url('../images/timer_bg.png')
+  //background-repeat: no-repeat
+  //background-position: center center
+  //background-size: contain
 .invoice_block
   border: 10px solid #e7e9f6
   margin-bottom: 30px
@@ -5090,6 +5090,26 @@ select,button,input,textarea
     font-family: 'Noto Sans', sans-serif
     font-weight: 400
     font-size: 18px
+.bottom_reg_buttons
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  align-items: center
+  a
+    margin-bottom: 0!important
+    margin-left: 20px
+.safe_pay_btn
+  text-decoration: none
+  text-transform: uppercase
+  color: #fff
+  background-color: #30941c
+  font-weight: 700
+  font-family: $accent-font
+  font-size: 14px
+  display: block
+  padding: 18px 32px
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
+  border-radius: 25px
 ////////////////////////////////////////////////////////////////////
 ////////////////MEDIA QUERIES///////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
@@ -5305,6 +5325,14 @@ select,button,input,textarea
       padding: 11px 5px 11px 5px
     button
       padding: 12.5px 40px
+  .bottom_reg_buttons
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    margin-left: auto
+    margin-right: auto
+    a
+      margin-bottom: 25px!important
 //  .animated_label
 //    transform: translate3d(25px, 33px, 0px)!important
 @media only screen and (max-width: 480px)
@@ -5393,8 +5421,9 @@ select,button,input,textarea
     padding: 15px 10px 5px 10px
   .timer_numbers
     font-size: 20px
-    width: 54px
-    letter-spacing: 14px
+    width: 55px
+    padding: 13px 16px
+    //letter-spacing: 14px
   .c_order_timer_block
     width: 210px
   .invoice_block_wrapper

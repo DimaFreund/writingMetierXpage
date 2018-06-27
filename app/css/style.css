@@ -9483,22 +9483,17 @@ select, button, input, textarea {
 }
 
 .timer_numbers {
+  background-color: #e7e9f6;
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  letter-spacing: 25px;
   font-weight: 500;
-  padding: 5px 0 5px 10px;
+  padding: 13px 18px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  width: 80px;
-  background-image: url("../images/timer_bg.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: contain;
-          background-size: contain;
+  width: 70px;
 }
 
 .invoice_block {
@@ -9678,6 +9673,47 @@ select, button, input, textarea {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
   font-size: 18px;
+}
+
+.bottom_reg_buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bottom_reg_buttons a {
+  margin-bottom: 0 !important;
+  margin-left: 20px;
+}
+
+.safe_pay_btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #30941c;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  display: block;
+  padding: 18px 32px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -10020,6 +10056,25 @@ select, button, input, textarea {
   .discount_input_block button {
     padding: 12.5px 40px;
   }
+  .bottom_reg_buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bottom_reg_buttons a {
+    margin-bottom: 25px !important;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -10128,8 +10183,8 @@ select, button, input, textarea {
   }
   .timer_numbers {
     font-size: 20px;
-    width: 54px;
-    letter-spacing: 14px;
+    width: 55px;
+    padding: 13px 16px;
   }
   .c_order_timer_block {
     width: 210px;
