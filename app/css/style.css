@@ -9494,6 +9494,7 @@ select, button, input, textarea {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   width: 70px;
+  text-align: center;
 }
 
 .invoice_block {

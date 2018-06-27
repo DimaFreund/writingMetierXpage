@@ -187,7 +187,7 @@
                       </div>
                     </div>
                     <script>
-                    var time = 7200000; //2 часа в МС
+                    var time = 7203000; //2 часа в МС
                     function getTime(time){
                         //if (time == 0) {
                         //   document.getElementById("YOUR_SELECTOR").style.opacity = "0";
@@ -198,17 +198,17 @@
                           var now = new Date().getTime();// нынешнее время
                           var distance = countDownDate - now;//
                           var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));//
-                          if (hours < 10) {
-                            hours = '0'+ hours;
-                          };
+//                          if (hours < 10) {
+//                            hours = '0'+ hours;
+//                          };
                           var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));//
-                          if (minutes < 10) {
-                            minutes = '0'+ minutes;
-                          };
+//                          if (minutes < 10) {
+//                            minutes = '0'+ minutes;
+//                          };
                           var seconds = Math.floor((distance % (1000 * 60)) / 1000);//
-                          if (seconds < 10) {
-                            seconds = '0'+ seconds;
-                          };
+//                          if (seconds < 10) {
+//                            seconds = '0'+ seconds;
+//                          };
                           document.getElementById("timer_hours").innerHTML = hours ;//
                           document.getElementById("timer_minutes").innerHTML = minutes ;
                           document.getElementById("timer_seconds").innerHTML = seconds ;
