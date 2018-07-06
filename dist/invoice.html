@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Noto+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Noto+Serif|Noto+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Order-registration rage - Writing Metier</title>
   </head>
@@ -92,209 +93,60 @@
     <!--header.css-->
     <main class="orderRegistration-page-content single-article registration-styles">
       <div class="wrapper">
-        <div class="content-wrapper">
-          <div class="content">
-            <h1>Order</h1>
-            <div class="steps-items">
-              <ul>
-                <li>
-                  <a href="order.html" class="name-step">Order Details</a>
-                  <div class="bg-counter-steps">
-                    <div class="num">1</div>
-                    <div class="text">Step</div>
-                  </div>
-                </li>
-                <li class="active-item">
-                  <a href="" class="name-step">Preview & Personal</a>
-                  <div class="bg-counter-steps">
-                    <div class="num">2</div>
-                    <div class="text">Step</div>
-                  </div>
-                </li>
-              </ul>
+        <h1>Invoice</h1>
+        <div class="invoice_block">
+          <div class="invoice_block_header">
+            <a href="#">Send by email</a>
+            <a href="#">download</a>
+            <a href="#">back to order</a>
+          </div> 
+          <div class="invoice_block_wrapper">
+            <div class="invoice_block_wrapper_adr">
+              <address>wmetier.xpage.com.ua</address>
+              <address>no-reply@wmetier.com</address>
             </div>
-            <div class="tabs-title">
-              <ul>
-                <li class="active-item returnedCustomer">Existing Customer</li>
-                <li class="newCustomer">New Customer</li>
-              </ul>
+            <div class="invoice_block_personal_info">
+              <b>Personal information</b>
+              <p>Email: berrington.ethan@gmail.com</p>
+              <p>Phone number: 1 (800) 281-2642</p>
             </div>
-<!--
-            <div class="custom-registration-title">
-              And a little bit more...
-            </div>
-            <div class="custom-registration-title">
-              Or...
-            </div>
--->
-            <form action="" class="calculator-section">
-              <div class="col">
-                <div class="title-row-form animated_label">Enter E-mail</div>
-                <input required type="text" class="animated_input">
-                <div class="error-mes">Please enter a valid email address.</div>
+            <h2>Order: #00001415</h2>
+            <div class="invoice_order_details">
+              <div class="invoice_order_details_item">
+                <b>Date:</b><pre>13/08/2017</pre>
               </div>
-              <div class="col error-item">
-                <div class="title-row-form animated_label">Password</div>
-                <input required type="password" class="animated_input">
-                <div class="error-mes">Please enter a valid password.</div>
-                
+              <div class="invoice_order_details_item">
+                <b>Deadline:</b><pre>20/08/2017</pre>
               </div>
-              <a href="#" class="forgot_pass_link">Forgot Your password ?</a>
-              <div class="col confirmPassword">
-                <div class="title-row-form animated_label">Confirm Password</div>
-                <input required type="password" class="animated_input">
-                <div class="error-mes">Please enter a valid password.</div>
+              <div class="invoice_order_details_item">
+                <b>Type of paper:</b><pre>Criticue Writing</pre>
               </div>
-              <div class="row-btns">
-<!--                <a href="order.html" class="btn-transp-withoutBorder">Back to step one</a>-->
-                <input type="submit" class="pink-btn" value="sign up">
+              <div class="invoice_order_details_item">
+                <b>Single / Double:</b><pre>Double - 275 words/page</pre>
               </div>
-            </form>
-            <div class="form_succeed">
-              <img src="images/confirm.png" alt="status ok">
-              <p>Hello, <b class="form_name_output">Barbara!</b></p>
-              <p>We are glad to see you again</p>
-              <a href="#">proceed to safe payment</a>
-            </div>
-            <div class="paper-details-section">
-              <div class="paper-details-content">
-               
-                <div class="details-desc">
-                 <h3>Your order Summary</h3>
-                  <div class="row">
-                    <div class="name-details">Type of paper:</div>
-                    <div class="desc-details">Critique Writing</div>
-                  </div>
-                  <div class="row">
-                    <div class="name-details">Pages:</div>
-                    <div class="desc-details">45</div>
-                  </div>
-                  <div class="row">
-                    <div class="name-details">Academic Level:</div>
-                    <div class="desc-details">Master (IB)</div>
-                  </div>
-                  <div class="row">
-                    <div class="name-details">Discipline:</div>
-                    <div class="desc-details">Critique Writing</div>
-                  </div>
-                  <div class="row">
-                    <div class="name-details">Citation style:</div>
-                    <div class="desc-details">Oxford</div>
-                  </div>
-                  <div class="row">
-                    <div class="name-details">Topic:</div>
-                    <div class="desc-details">Oxford</div>
-                  </div>
-                  <div class="row">
-                    <div class="name-details">Deadline:</div>
-                    <div class="desc-details">8 Hours</div>
-                  </div>
-                </div>
+              <div class="invoice_order_details_item">
+                <b>Academic Level:</b><pre>Master (IB)</pre>
               </div>
-              <div class="total-price">
-                <div class="title">Total price: </div>
-                <div class="znak">$</div>
-                <div class="res">239.93</div>
+              <div class="invoice_order_details_item">
+                <b>Number of pages:</b><pre>45</pre>
               </div>
-<!--
-              <div class="paper-details-btns">
-                <a href="order.html" class="btn-transp-withoutBorder">edit</a>
+              <div class="invoice_order_details_item">
+                <b>Type of sources:</b><pre>4</pre>
               </div>
--->
-<!--
-              <div class="title-section">
-                <div class="text1">Order</div>
-                <div class="text2">preview</div>
-              </div>
--->
-            </div>
-            <div class="bottom_reg_buttons">
-              <a href="order.html" class="btn-transp-withoutBorder">Back to step one</a>
-              <a href="#" class="safe_pay_btn">proceed to safe payment</a>
             </div>
           </div>
-          <div class="sidebar">
-            <div class="security_step_1">
-              <div class="securuty_step_1_top">
-                <div class="securuty_step_1_top_block">
-                  <img src="images/trustmark-rbg-2-copy.png" alt="icon">
-                </div>
-                <span></span>
-                <div class="securuty_step_1_top_block">
-                  <p>Tested daily</p>
-                  <a href="#">Click to verify</a>
-                </div>
-              </div>
-              <div class="security_step_1_txt">
-                <div class="security_step_1_txt_block">
-                  <div>
-                    <img src="images/padlock.png" alt="ico">
-                    <span>Secured shopping cart</span>
-                  </div>
-                  <p>Every McAfee SECURE certified site is tested and certified to be free of malware, viruses, phishing attacks, and other things that can harm you and your computer.</p>
-                  <p>The McAfee SECURE Insight and see which sites are McAfee SECURE certified as you browse with Chrome.</p>
-                </div>
-                <div class="security_step_1_txt_block">
-                  <div>
-                    <img src="images/computer-security-shield-icon.png" alt="ico">
-                    <span>Privacy and security</span>
-                  </div>
-                  <p>Every McAfee SECURE certified site is tested and certified to be free of malware, viruses, phishing attacks, and other things that can harm you and your computer.</p>
-                </div>
-                <div class="sec_abs_text">
-                  <span>All<br>payments<br>secured</span>
-                </div>
-              </div>
-            </div>
-<!--
-            <div class="paper-details-section">
-              <div class="paper-details-content">
-                <div class="details-desc">
-                  <div class="row">
-                    <div class="name-details">Type of paper:</div>
-                    <div class="desc-details">Critique Writing</div>
-                  </div>
-                  <div class="row">
-                    <div class="name-details">Pages:</div>
-                    <div class="desc-details">45</div>
-                  </div>
-                  <div class="row">
-                    <div class="name-details">Academic Level:</div>
-                    <div class="desc-details">Master (IB)</div>
-                  </div>
-                  <div class="row">
-                    <div class="name-details">Discipline:</div>
-                    <div class="desc-details">Critique Writing</div>
-                  </div>
-                  <div class="row">
-                    <div class="name-details">Citation style:</div>
-                    <div class="desc-details">Oxford</div>
-                  </div>
-                  <div class="row">
-                    <div class="name-details">Topic:</div>
-                    <div class="desc-details">Oxford</div>
-                  </div>
-                  <div class="row">
-                    <div class="name-details">Deadline:</div>
-                    <div class="desc-details">8 Hours</div>
-                  </div>
-                </div>
-              </div>
-              <div class="total-price">
-                <div class="title">Total price: </div>
-                <div class="znak">$</div>
-                <div class="res">239.93</div>
-              </div>
-              <div class="paper-details-btns">
-                <a href="order.html" class="btn-transp-withoutBorder">edit</a>
-              </div>
-              <div class="title-section">
-                <div class="text1">Order</div>
-                <div class="text2">preview</div>
-              </div>
-            </div>
--->
+          <div class="invoice_total_price">
+            <b>Total price: </b><span>$239.93</span>
           </div>
+        </div>
+        <div class="invoce_bootom_text">
+          <p>Please do not hesitate to contact us, should you happen to have any
+          queries or require additional assistance.
+          </p>
+          <p>
+          Truly yours, <br>
+          Wmetier.com Team
+          </p>
         </div>
       </div>
       <button class="btn-to-top"></button>

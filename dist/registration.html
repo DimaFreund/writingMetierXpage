@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Noto+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Noto+Serif|Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <title>Registration rage - Writing Metier</title>
@@ -71,6 +71,7 @@
 
 <main class="registration-page-content single-article registration-styles">
     <div class="wrapper">
+<!--
         <h1>Sign up</h1>
         <div class="content-wrapper">
             <div class="content">
@@ -116,70 +117,238 @@
                 <a href="" class="btn-transparent">sign in</a>
             </div>
         </div>
-
+-->
+      <form action="" id="registration_form" class="reg_form" method="post" autocomplete="off">
+        <h1>Log in</h1>
+        <div class="reg_form_block">
+          <label for="registration_form_email">Enter E-mail</label>
+          <input type="email" placeholder="E-mail *" required id="registration_form_email" name="registrationFormEmail">
+          <span>Wrong email</span>
+        </div>
+        <div class="reg_form_block">
+          <label for="registration_form_password">Password</label>
+          <input type="Password" placeholder="Password *" required id="registration_form_password" name="registrationFormPassword">
+        </div>
+        <button type="submit" class="pink-btn">log in</button>
+      </form>
     </div>
     <button class="btn-to-top"></button>
 </main>
 
 <!--footer.css-->
-<footer>
-    <div class="wrapper">
-        <div class="col col1">
-            <a href="" class="img-logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="78" height="78" viewBox="0 0 224 224"><style>.st0,.st1{fill:#fff;stroke:#fff;stroke-width:5;stroke-miterlimit:10}.st1{fill:none;stroke-width:16}</style><path class="st0" d="M43.8 42l29.5 80h15.2L112 57l23.8 65h15l29.5-80-13.6-12.5L143.3 96l-23.8-65.5h-15L81 95.7 57 29.5zM78 135h68.3l-26.8 72h-14.7z"/><circle class="st1" cx="112" cy="112" r="104"/></svg>
-            </a>
-            <div class="follow-section">
-                <span class="follow-title">Follow us:</span>
+<footer class="n_footer">
+        <div class="n_footer_part_1">
+          <div class="n_footer_part_1_wrapper">
+            <div class="n_footer_part_1_logo">
+              <img src="images/logo.svg" alt="logo" title="Writing Metier">
+              <span>Writing <br>Metier</span>
+            </div>
+            <ul class="n_footer_part_top_nav">
+              <li><a href="#">about</a></li>
+              <li><a href="#">services</a></li>
+              <li><a href="#">prices</a></li>
+              <li><a href="#">guarantees</a></li>
+              <li><a href="#">faq</a></li>
+              <li><a href="#">contacts</a></li>
+            </ul>
+            <div class="n_footer_part_1_secondary">
+              <div class="n_footer_part_1_secondary_col_1">
+                <div>
+                  <span>Email</span>
+                  <a href="mailto:info@writingmitier.com">info@writingmitier.com</a>
+                </div>
+                <div>
+                  <span>Chat</span>
+                  <p>Monday 00:00 AM - Saturday 01:00 PM (UTC)</p>
+                </div>
+                <div>
+                  <span>Follow us</span>
+                  <dd>
+                    <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 310 253.8">
+                              <g>
+                                 <path class="st0" d="M303 29.3c-4.9 2.2-9.9 4-15 5.5 6.1-6.9 10.7-14.9 13.5-23.7.6-2 0-4.1-1.6-5.4-1.6-1.3-3.9-1.4-5.7-.4-10.9 6.4-22.6 11.1-34.9 13.8C246.9 6.9 230.1 0 212.7 0c-36.7 0-66.5 29.9-66.5 66.5 0 2.9.2 5.8.5 8.6-45.5-4-87.9-26.4-116.9-62-1-1.3-2.6-2-4.3-1.8-1.6.1-3.1 1-3.9 2.5-5.9 10.1-9 21.7-9 33.5 0 16 5.7 31.2 15.8 43.1-3.1-1.1-6.1-2.4-8.9-4-1.5-.9-3.4-.8-4.9 0-1.5.9-2.5 2.5-2.5 4.2v.9c0 23.9 12.9 45.5 32.6 57.2-1.7-.2-3.4-.4-5.1-.7-1.7-.3-3.5.3-4.7 1.6-1.2 1.3-1.6 3.2-1 4.8 7.3 22.8 26.1 39.5 48.7 44.6-18.8 11.8-40.3 18-62.9 18-4.7 0-9.5-.3-14.1-.8-2.3-.3-4.5 1.1-5.3 3.3-.8 2.2 0 4.6 2 5.9 29 18.6 62.6 28.4 97 28.4 67.8 0 110.1-31.9 133.8-58.8 29.5-33.4 46.4-77.7 46.4-121.4 0-1.8 0-3.7-.1-5.5 11.6-8.8 21.6-19.4 29.8-31.5 1.2-1.8 1.1-4.3-.3-6-1.5-1.7-3.9-2.2-5.9-1.3z"/>
+                              </g>
+                      </svg>
+                    </a>
+                    <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 156.6 310">
+                              <g>
+                                 <path class="st0" d="M5 165.1h34V305c0 2.8 2.2 5 5 5h57.6c2.8 0 5-2.2 5-5V165.8h39.1c2.5 0 4.7-1.9 5-4.4l5.9-51.5c.2-1.4-.3-2.8-1.2-3.9-.9-1.1-2.3-1.7-3.7-1.7h-45V72c0-9.7 5.2-14.7 15.6-14.7h29.4c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5h-42.4c-7 0-31.5 1.4-50.8 19.2C37 38.8 40 62.4 40.7 66.5v37.8H5c-2.8 0-5 2.2-5 5v50.8c0 2.8 2.2 5 5 5z"/>
+                              </g>
+                      </svg>
+                    </a>
+                    <a href="#">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 24 24">
+                           <path d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z" fill-rule="evenodd" clip-rule="evenodd"/>
+                          </svg>
+                    </a>
+                  </dd>
+                </div>
+              </div>
+              <div class="n_footer_part_1_secondary_col_2">
+                <div class="n_footer_expand_list">
+                  <h4>Academic writing</h4>
+                  <ul>
+                    <li class="n_footer_expand_list_item">
+                      <a href="#"> - IB Essay</a>
+                    </li>
+                    <li class="n_footer_expand_list_item">
+                      <a href="#"> - Essay writing</a>
+                    </li>
+                    <li class="n_footer_expand_list_item n_footer_expand_list_item_disabled">
+                      <a href="#"> - ToK essay</a>
+                    </li>
+                    <li class="n_footer_expand_list_item n_footer_expand_list_item_disabled">
+                      <a href="#"> - Urgent essay writing</a>
+                    </li>
+                  </ul>
+                  <button class="n_footer_expand_list_btn">
+                    <b>more</b>
+                    <span></span>
+                  </button>
+                </div>
+                <div class="n_footer_expand_list">
+                  <h4>Business writing</h4>
+                  <ul>
+                    <li class="n_footer_expand_list_item">
+                      <a href="#"> - Letter writing service</a>
+                    </li>
+                    <li class="n_footer_expand_list_item">
+                      <a href="#"> - Presentation writing</a>
+                    </li>
+                    <li class="n_footer_expand_list_item n_footer_expand_list_item_disabled">
+                      <a href="#"> - Speech</a>
+                    </li>
+                  </ul>
+                  <button class="n_footer_expand_list_btn">
+                    <b>more</b>
+                    <span></span>
+                  </button>
+                </div>
+                <div class="n_footer_expand_list">
+                  <h4>content writing</h4>
+                  <ul>
+                    <li class="n_footer_expand_list_item">
+                      <a href="#"> - Content writing for ICO websites</a>
+                    </li>
+                    <li class="n_footer_expand_list_item">
+                      <a href="#"> - Guest blog writing service</a>
+                    </li>
+                    <!--<li class="n_footer_expand_list_item n_footer_expand_list_item_disabled">
+                      <a href="#"> - Writing service</a>
+                    </li>-->
+                  </ul>
+                  <button class="n_footer_expand_list_btn">
+                    <b>more</b>
+                    <span></span>
+                  </button>
+                </div>
+              </div>
+              <div class="n_footer_part_1_secondary_col_3">
+                <div class="n_footer_part_1_secondary_protected">
+                  <h4>Protected by:</h4>
+                  <div>
+                    <img src="images/shield.png" alt="protected by shield">
+                    <span>
+                      100% <br>
+                      security <br>
+                      guarantee <br>
+                    </span>
+                  </div>
+                </div>
+                <div class="n_footer_part_1_secondary_accept">
+                  <h4>We accept:</h4>
+                  <div>
+                    <img src="images/PayPal11.svg.png" alt="PayPal">
+                    <img src="images/visa-5-logo-png-transparent.svg.png" alt="visa">
+                    <img src="images/Mastercard-logo.svg.png" alt="mastercard">
+                    <img src="images/sitejabber_logo_padding.svg.png" alt="sitejabber">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="n_footer_part_2">
+          <div class="n_footer_part_2_menu_wrapper">
+            <ul>
+              <li><a href="#">Terms and conditions</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Revision</a></li>
+              <li><a href="#">Refund</a></li>
+              <li><a href="#">Cookie</a></li>
+            </ul>
+          </div>
+          <div class="n_footer_part_2_content">
+            <div class="n_footer_part_2_content_wrapper">
+              <div class="n_footer_part_2_content_left">
+                <h4>Attention!</h4>
+                <strong>
+                  Using this service is LEGAL and IS NOT prohibited by any university/college policies
+                </strong>
+                <p>
+                  You are allowed to use the original model paper you will receive in the following ways:
+                </p>
                 <ul>
-                    <li><a target="_blank" href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 310 253.8"><style>.st0{fill:#fff}</style><g><path class="st0" d="M303 29.3c-4.9 2.2-9.9 4-15 5.5 6.1-6.9 10.7-14.9 13.5-23.7.6-2 0-4.1-1.6-5.4-1.6-1.3-3.9-1.4-5.7-.4-10.9 6.4-22.6 11.1-34.9 13.8C246.9 6.9 230.1 0 212.7 0c-36.7 0-66.5 29.9-66.5 66.5 0 2.9.2 5.8.5 8.6-45.5-4-87.9-26.4-116.9-62-1-1.3-2.6-2-4.3-1.8-1.6.1-3.1 1-3.9 2.5-5.9 10.1-9 21.7-9 33.5 0 16 5.7 31.2 15.8 43.1-3.1-1.1-6.1-2.4-8.9-4-1.5-.9-3.4-.8-4.9 0-1.5.9-2.5 2.5-2.5 4.2v.9c0 23.9 12.9 45.5 32.6 57.2-1.7-.2-3.4-.4-5.1-.7-1.7-.3-3.5.3-4.7 1.6-1.2 1.3-1.6 3.2-1 4.8 7.3 22.8 26.1 39.5 48.7 44.6-18.8 11.8-40.3 18-62.9 18-4.7 0-9.5-.3-14.1-.8-2.3-.3-4.5 1.1-5.3 3.3-.8 2.2 0 4.6 2 5.9 29 18.6 62.6 28.4 97 28.4 67.8 0 110.1-31.9 133.8-58.8 29.5-33.4 46.4-77.7 46.4-121.4 0-1.8 0-3.7-.1-5.5 11.6-8.8 21.6-19.4 29.8-31.5 1.2-1.8 1.1-4.3-.3-6-1.5-1.7-3.9-2.2-5.9-1.3z"/></g></svg>
-                    </a></li>
-                    <li><a target="_blank" href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 156.6 310"><style>.st0{fill:#fff}</style><g><path class="st0" d="M5 165.1h34V305c0 2.8 2.2 5 5 5h57.6c2.8 0 5-2.2 5-5V165.8h39.1c2.5 0 4.7-1.9 5-4.4l5.9-51.5c.2-1.4-.3-2.8-1.2-3.9-.9-1.1-2.3-1.7-3.7-1.7h-45V72c0-9.7 5.2-14.7 15.6-14.7h29.4c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5h-42.4c-7 0-31.5 1.4-50.8 19.2C37 38.8 40 62.4 40.7 66.5v37.8H5c-2.8 0-5 2.2-5 5v50.8c0 2.8 2.2 5 5 5z"/></g></svg>
-                    </a></li>
-                    <li><a target="_blank" href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 310 218.2"><style>.st0{fill:#fff}</style><g><path class="st0" d="M297.9 18.7C286.7 5.4 266.1 0 226.6 0H83.4C43 0 22 5.8 10.9 19.9 0 33.7 0 54.1 0 82.2v53.7c0 54.6 12.9 82.2 83.4 82.2h143.2c34.2 0 53.2-4.8 65.4-16.5 12.6-12 17.9-31.7 17.9-65.7V82.2c.1-29.6-.7-50.1-12-63.5zM199 116.5l-65 34c-1.5.8-3 1.1-4.6 1.1-1.8 0-3.6-.5-5.2-1.4-3-1.8-4.8-5.1-4.8-8.6V73.9c0-3.5 1.8-6.7 4.8-8.5 3-1.8 6.7-1.9 9.8-.3l65 33.8c3.3 1.7 5.4 5.1 5.4 8.9 0 3.5-2.1 7-5.4 8.7z"/></g></svg>
-                    </a></li>
+                  <li>
+                    1. As a source for additional understanding of the subject
+                  </li>
+                  <li>
+                    2. As a source of ideas / reasoning for your own research (if properly referenced)
+                  </li>
+                  <li>
+                    3. For proper paraphrasing (see your educational institution's definition of plagiarism and acceptable paraphrase)
+                  </li>
+                  <li>
+                    4. Direct citing (if referenced properly)
+                  </li>
+                  <li>
+                    5. Thank you very much for respecting our authors' copyrights. <br>
+                    Site Management
+                  </li>
                 </ul>
+              </div>
+              <div class="n_footer_part_2_content_right">
+                <div class="n_footer_part_2_content_right_item">
+                  <h4>
+                    Disclaimer
+                  </h4>
+                  <p>
+                    One Freelance Limited: a custom writing service that provides online custom-written papers, such as term papers, research papers, thesis papers, essays, dissertations, and other custom writing services inclusive of research materials for assistance purposes only. These custom papers should be used with proper references.
+                  </p>
+                </div>
+                <div class="n_footer_part_2_content_right_item">
+                  <h4>
+                    Cookie Policy
+                  </h4>
+                  <p>
+                    We use cookies to give you the best possible experience on our website. By continuing to browse this site, you give consent for cookies to be used. For more details, including how you can amend your preferences, please read our <a href="#" target="_blank">Cookie Policy</a>.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class=" col col2">
-            <nav class="row footer-menu">
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="prices.html">Prices</a></li>
-                    <li><a href="guarantees.html">Guarantees</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                </ul>
-            </nav>
-            <div class="col address-section">
-                <div class="address">info@writingmitier.com</div>
-                <div class="address"><span>Call us</span> 1-346-385-4844</div>
-            </div>
-            <div class="row enter-your-email">
-                <input type="email" placeholder="Enter E-mail">
-                <a href="" class="link-to-sing-up">Click to sign up</a>
-            </div>
+        <div class="n_footer_part_3">
+          <div>
+            <p>© 2013-2018 Writing Mitier. All Rights Reserved</p>
+            <img src="images/dmca_protected_sml_120l.png" alt="ico">
+          </div>
+          <a href="http://page.ua/" target="_blank">
+            <img src="images/logo-page-white.svg" alt="Page Media Solutions" title="Page Media Solutions">
+          </a>
         </div>
-    </div>
-
-    <div class="copyright-section">
-        <div class="wrapper">
-            <div class="copyright">
-                © 2017 WritingMetier.<br>
-                All rights reserved
-            </div>
-            <a target="_blank" href="http://page.ua/" class="page-link"></a>
-        </div>
-    </div>
-</footer>
+      </footer>
 <!--footer.css-->
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+    <script src="js/pdfobject.min.js"></script>
 
 
 <!--my custom js-->

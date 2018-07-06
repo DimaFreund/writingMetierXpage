@@ -270,6 +270,7 @@ $( document ).ready(function(){
     }
 
     catalogItemCounter('.fieldCount');
+    catalogItemCounter('.fieldCountSources');
     //counter calculator end
 
 
@@ -310,9 +311,9 @@ $( document ).ready(function(){
         }
         else {
             allVariants.innerHTML = 'Status';
-            removeImg(inProgressElem, 'in progress');
-            removeImg(canceledElem, 'CANCELED');
-            removeImg(doneElem, 'DONE');
+            removeImg(inProgressElem, 'active');
+            removeImg(canceledElem, 'unpaid');
+            removeImg(doneElem, 'completed');
         }
     }
 
@@ -465,13 +466,8 @@ $( document ).ready(function(){
     //scrolling window
     window.addEventListener('scroll', function(e){
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-
-
         //scroll animate elements
-
         //scroll animate elements end
-
-
         // show/hide btn-to-top
         if(scrolled > height_window){
             btnToTop.classList.add('active-item');
@@ -495,7 +491,138 @@ $( document ).ready(function(){
     //move elem
 
     //move elem end
+  $('.n_footer_expand_list_btn').on('click', function(){
+    $(this).siblings('ul').children('.n_footer_expand_list_item').removeClass('n_footer_expand_list_item_disabled');
+    $(this).addClass('n_footer_expand_list_btn_disabled');
+    $(this).parent('.n_footer_expand_list').siblings('.n_footer_expand_list').children('.n_footer_expand_list_btn').removeClass('n_footer_expand_list_btn_disabled');
+$(this).parent('.n_footer_expand_list').siblings('.n_footer_expand_list').find('.n_footer_expand_list_item:gt(1)').addClass('n_footer_expand_list_item_disabled');
 
+  });
+  function topSubmenu(){
+    var previousScroll = 0;
+    $(window).scroll(function(event){
+       var scroll = $(this).scrollTop();
+       if (scroll > previousScroll){
+           $("header").addClass('header_minified');
+       } else {
+          $("header").removeClass('header_minified');
+       }
+       previousScroll = scroll;
+    });
+  };
+  if( $(window).width() >= 1024 ){
+    $(window).scroll(topSubmenu());
+  }
+  if( $(window).width() < 1024){
+    if( $('header').hasClass('header_minified') ){
+      $("header").removeClass('header_minified');
+    }
+  }
+//  $(window).resize(function(){
+//    if( $(window).width() >= 1024 ){
+//      $(window).scroll(topSubmenu());
+//    }
+//    if( $(window).width() < 1024){
+//      if( $('header').hasClass('header_minified') ){
+//        $("header").removeClass('header_minified');
+//      }
+//    }
+//  });
+  $('.n_title-collapse-item').click(function(){
+    $(this).siblings('.n_content-collapse-item').toggleClass('n_content-collapse-item_active');
+    $(this).toggleClass('n_title-collapse-item_active');
+  });
+  function validateRegForm(){
+    var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
+    var mail = $('#registration_form_email');
+    var errorSpan = $('.reg_form_block span');
+    mail.on('change',function(){
+    if(mail.val() != ''){
+      if(mail.val().search(pattern) == 0){
+        errorSpan.removeClass('reg_form_error_email');
+        $('.reg_form button').attr('disabled', false);
+        mail.removeClass('reg_form_error_for_input');
+      }else{
+        errorSpan.addClass('reg_form_error_email');
+        $('.reg_form button').attr('disabled', true);
+        mail.addClass('reg_form_error_for_input');
+      }
+    }else{
+      errorSpan.addClass('reg_form_error_email');
+      $('.reg_form button').attr('disabled', true);
+      mail.addClass('reg_form_error_for_input');
+    }
+    });
+  }
+  validateRegForm();
+  $('.col input').focusin(function(){
+    $(this).siblings('.animated_label').addClass('animated_label_active');
+  });
+   $('.col input').focusout(function(){
+     if($(this).val() == ''){
+      $(this).siblings('.animated_label').removeClass('animated_label_active');
+     }else{
+      $(this).siblings('.animated_label').addClass('animated_label_active');
+    }
+   });
+  $('.orders_switch_btn').click(function(){
+    $(this).addClass('orders_switch_btn_active');
+    $(this).siblings().removeClass('orders_switch_btn_active');
+  });
+  $('.header_bonus_close').click(function(){
+    $('header').removeClass('header_bonus_above');
+    $('.header_bonus').addClass('header_bonus_disabled')
+  });
+  $('.c_order_topic .btn-transp-withoutBorder').click(function(){
+    $(this).siblings('.c_order_topic_wrapper').addClass('c_order_topic_wrapper_full');
+    $(this).css({'display':"none"});
+  });
+  $('.cwb_wrapper .btn-transp-withoutBorder').click(function(){
+    $(this).siblings('.cwb_uploaded_files').toggleClass('cwb_uploaded_files_active');
+
+  });
+  $('.hideMoreFiles').click(function(){
+    $(this).text(function(i, v){
+       return v === 'Show more files' ? 'hide' : 'Show more files';
+    })
+  });
+//   	var time = 7200000;
+//   	function getTime(time){
+//        //var four_hours = 14400000; // 4 часа
+////        if (time == 0) {
+////           document.getElementById("countdown_timer_text_11629").style.opacity = "0";
+////        };
+//        var countDownDate = new Date().getTime() + time;// нынешнее время + 4 часа
+//        var my_interval = setInterval(Clock,1000);// запускаем таймер
+//        function Clock(){
+//          var now = new Date().getTime();// нынешнее время
+//          var distance = countDownDate - now;//
+//          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));//
+//          if (hours < 10) {
+//            hours = '0'+ hours;
+//          };
+//          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));//
+//          if (minutes < 10) {
+//            minutes = '0'+ minutes;
+//          };
+//          var seconds = Math.floor((distance % (1000 * 60)) / 1000);//
+//          if (seconds < 10) {
+//            seconds = '0'+ seconds;
+//          };
+//          document.getElementById("timer_hours").innerHTML = hours ;//
+//          document.getElementById("timer_minutes").innerHTML = minutes ;
+//          document.getElementById("timer_seconds").innerHTML = seconds ;
+////          if (distance < 3000) {
+////            countDownDate = new Date().getTime() + four_hours_11629;//обновляем переменную даты
+////          };
+//        } 
+//   	}
+//   	getTime(time);
+   
+  
+  
+  
+  
 });
 
 
