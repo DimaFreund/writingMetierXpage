@@ -42,6 +42,7 @@ gulp.task('connect',function(){
 gulp.task('sass', function () {
     gulp.src('app/sass/*.sass')
         .pipe(sass().on('error', sass.logError))
+        .pipe(prefixer('last 4 versions','>3%'))
         .pipe(gulp.dest('app/css'));
 });
 gulp.task('css', function() {
