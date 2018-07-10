@@ -7755,6 +7755,11 @@ footer .enter-your-email .link-to-sing-up {
   position: relative;
 }
 
+.n_collapse_doc_container iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .n_collapse_bg_text {
   margin-top: -125px;
   margin-bottom: -20px;
