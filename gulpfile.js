@@ -12,14 +12,15 @@ var sass = require('gulp-sass');
 gulp.task('connect',function(){
     connect.server({
         root:'app',
-        livereload: true
+        livereload: true,
+        port: 8888
     })
 });
 // var config = {
 //     mode : {
-//         css : {		// Activate the «css» mode
+//         css : {      // Activate the «css» mode
 //             render : {
-//                 css : true	// Activate CSS output (with default options)
+//                 css : true   // Activate CSS output (with default options)
 //             }
 //         }
 //     }

@@ -4818,7 +4818,7 @@ select,button,input,textarea
     font-weight: 700
     color: #000
 .c_order_btn
-  margin: 30px auto
+  margin: 30px 0
 .c_order_prefer_wrapper
   padding: 25px 30px 5px 30px
 .c_order_prefer_item
@@ -5463,3 +5463,29 @@ select,button,input,textarea
       margin-bottom: 0
     span
       font-size: 20px
+.c_order_prefer_buttons
+  padding: 5px 30px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  a
+    &:nth-child(1)
+      float: none
+      margin: 0
+@media only screen and (max-width: 460px)
+  .c_order_prefer_buttons
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    margin-top: 20px
+    a
+      &:nth-child(1)
+        margin-bottom: 20px
+@media only screen and (min-width: 1100px)
+  .moreDetailsBtn,.dateForm,.dateTo
+    width: 11%!important
+@media only screen and (max-width: 1100px)
+  .moreDetailsBtn
+    width: auto
+    min-width: 11%
